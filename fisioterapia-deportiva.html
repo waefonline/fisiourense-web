@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisioterapia Deportiva - Fisiourense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    </style>
+</head>
+
+<body class="bg-gray-200 text-gray-800">
+
+    <div class="max-w-screen-xl mx-auto bg-gray-50 shadow-2xl">
+
+        <!-- Encabezado y Navegación -->
+        <header id="header"
+            class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-screen-xl z-50 transition-all duration-300">
+            <div class="container mx-auto px-4">
+                <nav class="flex justify-between items-center py-4">
+                    <a href="index.html" id="logo">
+                        <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757592863/Generated_Image_September_11__2025_-_2_11PM-removebg-preview_tkqvyp.png"
+                            alt="Logotipo de Fisiourense" class="h-12 w-auto transition-all duration-300">
+                    </a>
+
+                    <a href="index.html#contacto"
+                        class="hidden md:inline-block bg-cyan-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105">PIDE
+                        CITA</a>
+
+                    <button id="mobile-menu-button" class="md:hidden text-white">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </nav>
+            </div>
+            <!-- Menú Móvil -->
+            <div id="mobile-menu" class="hidden md:hidden bg-cyan-800 bg-opacity-95">
+                <div class="p-4">
+                    <a href="index.html#contacto"
+                        class="block w-full bg-cyan-500 text-white font-semibold px-6 py-3 rounded-full text-center hover:bg-cyan-600">PIDE
+                        CITA</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Sección Héroe -->
+            <section
+                class="relative h-[60vh] flex items-center justify-center text-white text-center hero-bg-deportiva">
+                <div class="relative z-10 px-4">
+                    <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">Fisioterapia Deportiva</h1>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto mt-4 font-light">Optimiza tu rendimiento, acelera tu
+                        recuperación y previene futuras lesiones.</p>
+                </div>
+            </section>
+
+            <!-- Contenido Principal -->
+            <div class="bg-white py-20">
+                <div class="container mx-auto px-4">
+                    <!-- Introducción -->
+                    <section class="max-w-4xl mx-auto scroll-animate">
+                        <h2 class="text-3xl font-bold text-cyan-800 text-center mb-6">Tu aliado en el deporte</h2>
+                        <p class="text-gray-600 leading-relaxed text-center mb-8">
+                            La fisioterapia deportiva es una especialización dedicada a la prevención, tratamiento y
+                            readaptación de lesiones en atletas de todos los niveles. Entendemos las demandas
+                            específicas de cada disciplina y aplicamos un enfoque proactivo para que puedas alcanzar tu
+                            máximo potencial, minimizando el riesgo y garantizando una vuelta a la competición segura y
+                            en el menor tiempo posible.
+                        </p>
+                    </section>
+
+                    <!-- Patologías Tratadas -->
+                    <section class="mt-20 scroll-animate">
+                        <h2 class="text-3xl font-bold text-cyan-800 text-center mb-12">Lesiones deportivas más comunes
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                            <!-- Lesiones Musculares -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757675418/Generated_Image_September_12_2025_-_1_09PM_wkqacq.png'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Lesiones Musculares</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Lesiones Musculares</h3>
+                                        <p class="text-gray-600 text-sm">Tratamiento de contracturas, roturas de fibras,
+                                            sobrecargas y contusiones. Utilizamos terapia manual y tecnología de última
+                                            generación para acelerar la cicatrización y restaurar la función muscular.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tendinopatías -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757675708/Generated_Image_September_12_2025_-_1_13PM_r4xgqy.png'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Tendinopatías</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Tendinopatías</h3>
+                                        <p class="text-gray-600 text-sm">Abordaje de epicondilitis (codo de tenista),
+                                            tendinitis rotuliana o aquílea. Nos centramos en reducir la inflamación,
+                                            regenerar el tendón y corregir los factores biomecánicos que causan la
+                                            lesión.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Lesiones de Ligamentos -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757675815/Generated_Image_September_12_2025_-_1_16PM_vkgggy.png'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Lesiones de Ligamentos</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Lesiones de Ligamentos</h3>
+                                        <p class="text-gray-600 text-sm">Desde esguinces de tobillo hasta lesiones más
+                                            complejas como las del ligamento cruzado anterior. Nuestro objetivo es
+                                            restaurar la estabilidad articular y asegurar una recuperación completa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pubalgia -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757677072/Generated_Image_September_12_2025_-_1_37PM_fjwsdt.png'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Pubalgia</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Pubalgia</h3>
+                                        <p class="text-gray-600 text-sm">Conocida como la hernia del deportista,
+                                            tratamos el dolor en la zona del pubis mediante la corrección de
+                                            desequilibrios musculares y la aplicación de terapia manual específica.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fascitis Plantar -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757677513/Generated_Image_September_12_2025_-_1_44PM_yeyys1.png'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Fascitis Plantar</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Fascitis Plantar</h3>
+                                        <p class="text-gray-600 text-sm">Tratamos el dolor agudo en el talón, muy común
+                                            en corredores, mediante técnicas de descarga, estiramientos y el estudio de
+                                            la pisada para corregir su causa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Readaptación Deportiva -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757677719/Generated_Image_September_12_2025_-_1_47PM_noyxc1.png'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Readaptación Deportiva</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Readaptación Deportiva</h3>
+                                        <p class="text-gray-600 text-sm">No basta con curar la lesión, hay que preparar
+                                            al cuerpo para volver a competir. Creamos un plan de vuelta progresiva al
+                                            deporte, simulando gestos deportivos y asegurando una reincorporación
+                                            segura.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Beneficios -->
+                    <section class="mt-20 scroll-animate">
+                        <h2 class="text-3xl font-bold text-cyan-800 text-center mb-12">Nuestro enfoque terapéutico</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-center">
+                            <div class="benefit-card">
+                                <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757677889/Generated_Image_September_12_2025_-_1_50PM_h1ntqs.png"
+                                    class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Prevención de Lesiones</h3>
+                                <p class="text-gray-600">Analizamos tus puntos débiles y te enseñamos a fortalecerlos
+                                    para reducir drásticamente el riesgo de futuras lesiones.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757678526/ChatGPT_Image_12_sept_2025_14_02_01_xm0uz8.png"
+                                    class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Recuperación Acelerada</h3>
+                                <p class="text-gray-600">Combinamos terapia manual con la tecnología más avanzada para
+                                    acortar los plazos de recuperación de forma segura.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757678816/Generated_Image_September_12_2025_-_2_06PM_c3bg2m.png"
+                                    class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Optimización del Rendimiento</h3>
+                                <p class="text-gray-600">No solo tratamos lesiones, te ayudamos a ser un mejor atleta,
+                                    mejorando tu técnica, fuerza y resistencia.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <section class="bg-cyan-700 py-20 text-white text-center scroll-animate">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-4">Vuelve al juego más fuerte que nunca</h2>
+                    <p class="max-w-xl mx-auto mb-8">No dejes que una lesión te frene. Pide tu cita y deja que nuestro
+                        equipo de especialistas en deporte te ayude a alcanzar tus metas.</p>
+                    <a href="index.html#contacto"
+                        class="bg-white text-cyan-700 font-bold px-8 py-4 rounded-full hover:bg-cyan-100 transition-all duration-300 transform hover:scale-105 text-lg">Contacta
+                        con nosotros</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-cyan-900 text-white">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex flex-col items-center gap-6">
+                    <a href="index.html">
+                        <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757592863/Generated_Image_September_11__2025_-_2_11PM-removebg-preview_tkqvyp.png"
+                            alt="Logotipo de Fisiourense" class="h-12 w-auto" style="filter: brightness(0) invert(1);">
+                    </a>
+                    <div class="flex items-center space-x-6 text-cyan-200">
+                        <a href="index.html" class="hover:text-white transition-colors font-medium">Volver a Inicio</a>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-cyan-200 hover:text-white"><i data-lucide="instagram"
+                                class="h-6 w-6"></i></a>
+                        <a href="#" class="text-cyan-200 hover:text-white"><i data-lucide="facebook"
+                                class="h-6 w-6"></i></a>
+                    </div>
+                </div>
+                <div class="border-t border-cyan-800 mt-8 pt-6 text-center text-sm text-cyan-300">
+                    <p>&copy; 2024 Fisiourense. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

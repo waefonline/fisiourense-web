@@ -1,0 +1,381 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Backgrounds */
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1768586822/Fot_fot0_250614100_t1-145_bsxnep.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 20, 30);
+}
+
+.hero-bg-fisioterapia {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757594590/Generated_Image_September_11_2025_-_2_42PM_egiqno.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-bg-deportiva {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757606662/Generated_Image_September_11_2025_-_5_53PM_1_tyodfn.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-bg-osteopatia {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757607031/Generated_Image_September_11_2025_-_5_56PM_rvdmam.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-bg-nutricion {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757607145/Generated_Image_September_11_2025_-_6_11PM_dmpnuo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-bg-entrenador {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757607295/Generated_Image_September_11_2025_-_6_14PM_iharib.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-bg-estetica {
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757627719/pau-0235_loemf2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Service Cards (Modern Hover/Zoom Effect) */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+    /* Keep for potential 3d effects, though not used for flip anymore */
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+    transform-style: flat;
+    /* No longer 3D flip */
+}
+
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: transform 0.5s ease;
+    color: white;
+    /* Ensure front text is white */
+}
+
+.flip-card:hover .flip-card-front {
+    transform: scale(1.1);
+}
+
+.flip-card-back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* Adjust to content */
+    max-height: 100%;
+    background-color: rgba(0, 83, 109, 0.95);
+    /* Dark Cyan background for readability */
+    color: white;
+    /* White text as requested */
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+    padding: 1.5rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* Force white text on children to override Tailwind utility classes */
+.flip-card-back h3,
+.flip-card-back p,
+.flip-card-back span,
+.flip-card-back a {
+    color: white !important;
+}
+
+.flip-card:hover .flip-card-back {
+    transform: translateY(0);
+}
+
+.card-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 83, 109, 0.8) 0%, rgba(0, 109, 135, 0.3) 100%);
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.flip-card:hover .card-bg-overlay {
+    opacity: 0.7;
+}
+
+/* Carousel Styles */
+.carousel-item {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-item {
+        flex: 0 0 33.333%;
+    }
+}
+
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+/* Benefits Cards Animation */
+.benefit-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.15), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.benefit-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.3);
+}
+
+.benefit-card:hover::before {
+    left: 100%;
+}
+
+.benefit-card img {
+    transition: all 0.4s ease;
+}
+
+.benefit-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+.benefit-card h3,
+.benefit-card p {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-card:hover h3 {
+    color: rgb(6, 182, 212);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   MEJORAS MÓVIL Y MARKETING (NUEVO)
+   ========================================= */
+
+/* 1. BARRA STICKY INFERIOR (Solo visible en móvil) */
+@media (max-width: 767px) {
+
+    /* Espacio extra al final de la web para que la barra no tape el footer */
+    body {
+        padding-bottom: 90px;
+    }
+
+    /* Ocultar el botón flotante original de WhatsApp para no duplicar */
+    .whatsapp-float {
+        display: none !important;
+    }
+
+    /* Ajuste para móviles modernos (iPhone X y superiores) */
+    .safe-area-pb {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+}
+
+/* 2. TARJETAS DE SERVICIOS EN MÓVIL (Versión limpia "Saber más") */
+@media (max-width: 767px) {
+    .flip-card-back {
+        /* Posición: Lo pegamos abajo del todo y mostramos el 100% de su (nueva) altura */
+        transform: translateY(0) !important;
+        bottom: 0;
+        top: auto;
+        height: auto !important;
+        /* Que la altura se ajuste solo al texto "Saber más" */
+
+        /* Estética de la barra */
+        background-color: rgba(0, 83, 109, 0.95);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        /* Alineación */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+    }
+
+    /* OCULTAR Título y Descripción en móvil (¡Importante!) */
+    .flip-card-back h3,
+    .flip-card-back p:not(.italic) {
+        display: none !important;
+    }
+
+    /* MOSTRAR solo el texto de acción */
+    .flip-card-back .italic {
+        display: block !important;
+        font-style: normal;
+        margin: 0;
+        font-size: 0;
+        /* Ocultamos el texto "Haz clic..." original */
+    }
+
+    /* Creamos el nuevo texto "Saber más" */
+    .flip-card-back .italic::after {
+        content: "Saber más +";
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+/* 3. ESTILOS PARA LA NUEVA SECCIÓN DE IA */
+.ia-section-bg {
+    background: linear-gradient(135deg, #0e7490 0%, #164e63 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de pulso para el botón de IA */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.pulse-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50px;
+    z-index: -1;
+
+    animation: pulse-ring 2s infinite;
+}
+
+/* 4. ANIMACIÓN MARQUESINA VERTICAL (TESTIMONIOS) */
+@keyframes scroll-vertical {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: scroll-vertical 20s linear infinite;
+}
+
+/* Pausar animación al pasar el ratón (opcional, buena UX) */
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Máscara de desvanecimiento para el contenedor de testimonios */
+.mask-gradient-vertical {
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
