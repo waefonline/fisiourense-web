@@ -1,0 +1,15 @@
+{
+  "name": "web-fisiourense",
+  "version": "1.0.0",
+  "description": "Web Fisiourense",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}
