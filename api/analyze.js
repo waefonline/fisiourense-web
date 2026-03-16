@@ -34,7 +34,8 @@ module.exports = async (request, response) => {
     return response.status(500).json({ message: 'Server configuration error: API key not configured' });
   }
 
-  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-001:generateContent?key=${apiKey}`;
+  // Usamos 'gemini-flash-latest' ya que el usuario confirmó que le funciona en otros proyectos
+  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
 
   const systemPrompt = "Actúas como un asistente virtual para Fisiourense, una clínica de fisioterapia en Ourense, España. Eres amable, profesional y tu objetivo es orientar al usuario, nunca diagnosticar. Tu conocimiento se basa en los servicios que ofrece la clínica: Fisioterapia, Fisioterapia Deportiva, Osteopatía, Nutrición, Entrenador Personal y Fisiourense Estética.";
 
@@ -42,10 +43,14 @@ module.exports = async (request, response) => {
 
   const payload = {
     contents: [{ parts: [{ text: userQuery }] }],
+    // systemInstruction puede fallar en modelos antiguos, pero gemini-flash-latest debería soportarlo.
+    // Si sigue fallando, probaremos a quitar esto.
     systemInstruction: { parts: [{ text: systemPrompt }] },
   };
 
   try {
+    console.log(`Attempting to call Gemini API with model: gemini-flash-latest`);
+
     const geminiResponse = await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -54,8 +59,8 @@ module.exports = async (request, response) => {
 
     if (!geminiResponse.ok) {
       const errorText = await geminiResponse.text();
-      console.error(`Gemini API Error: ${geminiResponse.status} - ${errorText}`);
-      throw new Error(`Gemini API responded with status: ${geminiResponse.status}`);
+      console.error(`Gemini API Error details: ${geminiResponse.status} - ${errorText}`);
+      throw new Error(`Gemini API responded with status: ${geminiResponse.status} - ${errorText}`);
     }
 
     const result = await geminiResponse.json();

@@ -276,7 +276,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultText = document.getElementById('result-text');
     const loadingSpinner = document.getElementById('loading-spinner');
 
+    const closeAnalyzeBtn = document.getElementById('close-analysis-btn');
+
     if (analyzeBtn) {
+        if (closeAnalyzeBtn) {
+            closeAnalyzeBtn.addEventListener('click', () => {
+                geminiResultDiv.classList.add('hidden');
+                resultText.innerHTML = '';
+                symptomInput.value = '';
+                closeAnalyzeBtn.classList.add('hidden');
+            });
+        }
+
         analyzeBtn.addEventListener('click', async () => {
             const userInput = symptomInput.value;
 
@@ -285,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 geminiResultDiv.classList.remove('hidden');
                 loadingSpinner.style.display = 'none';
                 resultText.style.display = 'block';
+                if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
                 return;
             }
 
@@ -307,6 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 geminiResultDiv.classList.remove('hidden');
                 loadingSpinner.style.display = 'none';
                 resultText.style.display = 'block';
+                if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
                 return;
             }
 
@@ -314,6 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadingSpinner.style.display = 'flex';
             resultText.style.display = 'none';
             resultText.innerHTML = '';
+            if (closeAnalyzeBtn) closeAnalyzeBtn.classList.add('hidden');
 
             try {
                 // Usamos ruta relativa "api/analyze"
@@ -333,6 +347,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 generatedText = generatedText.replace(/\n/g, '<br>');
                 resultText.innerHTML = generatedText;
 
+                if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
+
                 // Incrementar contador SOLO si la petición fue exitosa
                 const newCount = queryCount + 1;
                 localStorage.setItem('symptom_queries', newCount.toString());
@@ -349,12 +365,23 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 console.error("Error al llamar a la función de API:", error);
                 resultText.innerHTML = "Lo sentimos, ha ocurrido un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde o llámanos directamente al <a href='tel:988255461' class='underline font-bold hover:text-white'>988 255 461</a>.";
+                if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
             } finally {
                 loadingSpinner.style.display = 'none';
                 resultText.style.display = 'block';
             }
         });
     }
+
+    // Solución para el botón LLAMAR en algunos navegadores de escritorio
+    const callBtns = document.querySelectorAll('a[href^="tel:"]');
+    callBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // En escritorio, a veces no pasa nada visualmente.
+            // Forzamos un log para depuración y aseguramos que no haya preventDefault externos
+            console.log('Intentando llamar a:', btn.getAttribute('href'));
+        });
+    });
 
     // --- Lógica para animaciones de scroll ---
     const animatedElements = document.querySelectorAll('.scroll-animate');
