@@ -221,16 +221,24 @@
     <script src="js/main.js"></script>
     <script>
         // Soporte para tarjetas flip en dispositivos táctiles
-        document.querySelectorAll('.flip-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                if (this.classList.contains('active')) {
-                    this.classList.remove('active');
-                } else {
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.flip-card').forEach(card => {
+                card.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const isActive = this.classList.contains('active');
+                    
                     document.querySelectorAll('.flip-card.active').forEach(other => {
-                        other.classList.remove('active');
+                        if (other !== this) other.classList.remove('active');
                     });
-                    this.classList.add('active');
-                }
+                    
+                    this.classList.toggle('active', !isActive);
+                });
+            });
+
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.flip-card.active').forEach(card => {
+                    card.classList.remove('active');
+                });
             });
         });
     </script>
