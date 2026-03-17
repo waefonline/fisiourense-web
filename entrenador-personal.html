@@ -202,9 +202,43 @@
             </div>
         </footer>
 
+        <a href="https://wa.me/34622203971" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp">
+            <i data-lucide="message-circle" class="h-8 w-8"></i>
+        </a>
+
+        <div
+            class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden flex p-3 gap-3 safe-area-pb">
+            <a href="tel:988255461"
+                class="flex-1 bg-cyan-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform">
+                <i data-lucide="phone" class="h-5 w-5"></i>
+                <span>Llamar</span>
+            </a>
+            <a href="https://wa.me/34622203971" target="_blank"
+                class="flex-1 bg-green-500 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform">
+                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        // Soporte para tarjetas flip en dispositivos táctiles
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.flip-card.active').forEach(other => {
+                        other.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
