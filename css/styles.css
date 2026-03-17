@@ -48,10 +48,10 @@ body {
 }
 
 .hero-bg-estetica {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757627719/pau-0235_loemf2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/w_1000,q_auto,f_auto/v1773763687/portadaestetica_vztviz.png');
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: scroll !important;
 }
 
 /* Service Cards (Modern Hover/Zoom Effect) */
