@@ -130,7 +130,15 @@ body {
 
 .flip-card:hover .flip-card-back,
 .flip-card.active .flip-card-back {
-    transform: translateY(0);
+    transform: translateY(0) !important;
+    z-index: 50 !important;
+    opacity: 1 !important;
+}
+
+/* On mobile, ensure the front doesn't block the back when active */
+.flip-card.active .flip-card-front {
+    opacity: 0.3;
+    filter: blur(2px);
 }
 
 .card-bg-overlay {
@@ -274,50 +282,29 @@ body {
     }
 }
 
-/* 2. TARJETAS DE SERVICIOS EN MÓVIL (Versión limpia "Saber más") */
+/* 2. TARJETAS DE SERVICIOS EN MÓVIL (Restaurado para que funcione el flip/slide) */
 @media (max-width: 767px) {
     .flip-card-back {
-        /* Posición: Lo pegamos abajo del todo y mostramos el 100% de su (nueva) altura */
-        transform: translateY(0) !important;
-        bottom: 0;
-        top: auto;
+        /* Permitir que empiece fuera de la vista para poder deslizarlo */
+        transform: translateY(100%) !important;
         height: auto !important;
-        /* Que la altura se ajuste solo al texto "Saber más" */
-
-        /* Estética de la barra */
-        background-color: rgba(0, 83, 109, 0.95);
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-        /* Alineación */
-        display: flex;
+        max-height: 100%;
+        padding: 1.5rem;
+        display: flex !important;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 12px;
     }
 
-    /* OCULTAR Título y Descripción en móvil (¡Importante!) */
+    .flip-card.active .flip-card-back {
+        transform: translateY(0) !important;
+    }
+
+    /* Aseguramos que el contenido sea visible */
     .flip-card-back h3,
-    .flip-card-back p:not(.italic) {
-        display: none !important;
-    }
-
-    /* MOSTRAR solo el texto de acción */
-    .flip-card-back .italic {
+    .flip-card-back p {
         display: block !important;
-        font-style: normal;
-        margin: 0;
-        font-size: 0;
-        /* Ocultamos el texto "Haz clic..." original */
-    }
-
-    /* Creamos el nuevo texto "Saber más" */
-    .flip-card-back .italic::after {
-        content: "Saber más +";
-        font-size: 0.95rem;
-        font-weight: 500;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        opacity: 1 !important;
     }
 }
 
