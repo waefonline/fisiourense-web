@@ -1226,58 +1226,49 @@
 
     <script>
         /**
-         * Soporte ultra-robusto para tarjetas en móviles (Versión Enlaces)
-         * Soluciona el problema de la doble pulsación intermitente
+         * Lógica de tarjetas en móviles (Versión Final Estable)
+         * - Primera pulsación: muestra info
+         * - Segunda pulsación (en cualquier momento): navega
+         * - Cerrar solo si se toca fuera de TODAS las tarjetas
          */
         (function() {
             const initServiceCards = () => {
-                // Seleccionamos los enlaces que contienen tarjetas
-                const serviceLinks = document.querySelectorAll('a[href$=".html"] .flip-card');
-                
-                serviceLinks.forEach(card => {
+                const cards = Array.from(document.querySelectorAll('a[href$=".html"] .flip-card'));
+
+                cards.forEach(card => {
                     const link = card.closest('a');
                     if (!link || link.getAttribute('data-has-logic')) return;
 
                     link.addEventListener('click', function(e) {
-                        // Solo aplicar en móviles/tablets
+                        // En escritorio dejamos el comportamiento normal
                         if (window.innerWidth >= 1024) return;
 
-                        const isActive = card.classList.contains('active');
-
-                        if (!isActive) {
-                            // PRIMERA PULSACIÓN: Revelar información
+                        if (!card.classList.contains('active')) {
+                            // PRIMERA PULSACIÓN: mostrar info, bloquear enlace
                             e.preventDefault();
-                            e.stopPropagation();
 
-                            // Cerrar cualquier otra tarjeta activa
-                            document.querySelectorAll('.flip-card.active').forEach(c => {
-                                c.classList.remove('active');
-                            });
+                            // Cerrar las demás
+                            cards.forEach(c => c.classList.remove('active'));
 
-                            // Activar esta
+                            // Abrir ésta
                             card.classList.add('active');
-                        } else {
-                            // SEGUNDA PULSACIÓN: Ya está activa, dejar que el enlace funcione
-                            // No llamamos a preventDefault()
                         }
+                        // SEGUNDA (O MÁS): No bloqueamos nada → el navegador navega
                     });
 
                     link.setAttribute('data-has-logic', 'true');
                 });
             };
 
-            // Ejecutar en carga y en ready
             initServiceCards();
             document.addEventListener('DOMContentLoaded', initServiceCards);
 
-            // Cerrar tarjetas al tocar fuera
-            document.addEventListener('click', (e) => {
+            // Solo cerramos si se toca completamente fuera de cualquier tarjeta
+            document.addEventListener('touchstart', (e) => {
                 if (!e.target.closest('.flip-card')) {
-                    document.querySelectorAll('.flip-card.active').forEach(c => {
-                        c.classList.remove('active');
-                    });
+                    document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
                 }
-            });
+            }, { passive: true });
         })();
     </script>
 
