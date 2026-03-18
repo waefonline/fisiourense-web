@@ -1226,24 +1226,44 @@
 
     <script>
         /**
-         * Soporte ultra-robusto para tarjetas en móviles
+         * Soporte ultra-robusto para tarjetas en móviles (Versión Index con Enlaces)
+         * Primera pulsación: muestra texto
+         * Segunda pulsación: activa el enlace
          */
         (function() {
             const initCards = () => {
                 const cards = document.querySelectorAll('.flip-card');
                 cards.forEach(card => {
                     if (card.getAttribute('data-has-listener')) return;
+                    
                     card.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        const wasActive = this.classList.contains('active');
-                        cards.forEach(c => c.classList.remove('active'));
-                        if (!wasActive) this.classList.add('active');
+                        const isMobile = window.innerWidth < 1024; // Incluimos tablets
+                        
+                        if (isMobile) {
+                            const wasActive = this.classList.contains('active');
+                            
+                            if (!wasActive) {
+                                // Primera vez: mostrar y bloquear navegación
+                                e.preventDefault();
+                                e.stopPropagation();
+                                
+                                cards.forEach(c => c.classList.remove('active'));
+                                this.classList.add('active');
+                            } else {
+                                // Segunda vez: permitir navegación natural
+                                // No llamamos a preventDefault
+                            }
+                        }
                     });
+                    
                     card.setAttribute('data-has-listener', 'true');
                 });
             };
+            
             initCards();
             document.addEventListener('DOMContentLoaded', initCards);
+            
+            // Cerrar al pulsar fuera
             document.addEventListener('click', () => {
                 document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
             });
