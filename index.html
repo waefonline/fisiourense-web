@@ -1237,7 +1237,7 @@
                     if (card.getAttribute('data-has-listener')) return;
                     
                     card.addEventListener('click', function(e) {
-                        const isMobile = window.innerWidth < 1024; // Incluimos tablets
+                        const isMobile = window.innerWidth < 1024;
                         
                         if (isMobile) {
                             const wasActive = this.classList.contains('active');
@@ -1250,8 +1250,11 @@
                                 cards.forEach(c => c.classList.remove('active'));
                                 this.classList.add('active');
                             } else {
-                                // Segunda vez: permitir navegación natural
-                                // No llamamos a preventDefault
+                                // Segunda vez: forzamos navegación programática para evitar fallos táctiles
+                                const parentLink = this.closest('a');
+                                if (parentLink && parentLink.getAttribute('href')) {
+                                    window.location.href = parentLink.getAttribute('href');
+                                }
                             }
                         }
                     });
