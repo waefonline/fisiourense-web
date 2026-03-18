@@ -1226,49 +1226,57 @@
 
     <script>
         /**
-         * Soporte ultra-robusto para tarjetas en móviles (Versión Index con Enlaces)
-         * Primera pulsación: muestra texto
-         * Segunda pulsación: activa el enlace
+         * Soporte ultra-robusto para tarjetas en móviles (Versión Enlaces)
+         * Soluciona el problema de la doble pulsación intermitente
          */
         (function() {
-            const initCards = () => {
-                const cards = document.querySelectorAll('.flip-card');
-                cards.forEach(card => {
-                    if (card.getAttribute('data-has-listener')) return;
-                    
-                    card.addEventListener('click', function(e) {
-                        const isMobile = window.innerWidth < 1024;
-                        
-                        if (isMobile) {
-                            const wasActive = this.classList.contains('active');
-                            
-                            if (!wasActive) {
-                                // Primera vez: mostrar y bloquear navegación
-                                e.preventDefault();
-                                e.stopPropagation();
-                                
-                                cards.forEach(c => c.classList.remove('active'));
-                                this.classList.add('active');
-                            } else {
-                                // Segunda vez: forzamos navegación programática para evitar fallos táctiles
-                                const parentLink = this.closest('a');
-                                if (parentLink && parentLink.getAttribute('href')) {
-                                    window.location.href = parentLink.getAttribute('href');
-                                }
-                            }
+            const initServiceCards = () => {
+                // Seleccionamos los enlaces que contienen tarjetas
+                const serviceLinks = document.querySelectorAll('a[href$=".html"] .flip-card');
+                
+                serviceLinks.forEach(card => {
+                    const link = card.closest('a');
+                    if (!link || link.getAttribute('data-has-logic')) return;
+
+                    link.addEventListener('click', function(e) {
+                        // Solo aplicar en móviles/tablets
+                        if (window.innerWidth >= 1024) return;
+
+                        const isActive = card.classList.contains('active');
+
+                        if (!isActive) {
+                            // PRIMERA PULSACIÓN: Revelar información
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            // Cerrar cualquier otra tarjeta activa
+                            document.querySelectorAll('.flip-card.active').forEach(c => {
+                                c.classList.remove('active');
+                            });
+
+                            // Activar esta
+                            card.classList.add('active');
+                        } else {
+                            // SEGUNDA PULSACIÓN: Ya está activa, dejar que el enlace funcione
+                            // No llamamos a preventDefault()
                         }
                     });
-                    
-                    card.setAttribute('data-has-listener', 'true');
+
+                    link.setAttribute('data-has-logic', 'true');
                 });
             };
-            
-            initCards();
-            document.addEventListener('DOMContentLoaded', initCards);
-            
-            // Cerrar al pulsar fuera
-            document.addEventListener('click', () => {
-                document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
+
+            // Ejecutar en carga y en ready
+            initServiceCards();
+            document.addEventListener('DOMContentLoaded', initServiceCards);
+
+            // Cerrar tarjetas al tocar fuera
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.flip-card')) {
+                    document.querySelectorAll('.flip-card.active').forEach(c => {
+                        c.classList.remove('active');
+                    });
+                }
             });
         })();
     </script>
