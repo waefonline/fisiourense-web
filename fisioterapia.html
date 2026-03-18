@@ -276,27 +276,29 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Soporte para tarjetas flip en dispositivos táctiles
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.flip-card').forEach(card => {
-                card.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    const isActive = this.classList.contains('active');
-                    
-                    document.querySelectorAll('.flip-card.active').forEach(other => {
-                        if (other !== this) other.classList.remove('active');
+        /**
+         * Soporte ultra-robusto para tarjetas en móviles
+         */
+        (function() {
+            const initCards = () => {
+                const cards = document.querySelectorAll('.flip-card');
+                cards.forEach(card => {
+                    if (card.getAttribute('data-has-listener')) return;
+                    card.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const wasActive = this.classList.contains('active');
+                        cards.forEach(c => c.classList.remove('active'));
+                        if (!wasActive) this.classList.add('active');
                     });
-                    
-                    this.classList.toggle('active', !isActive);
+                    card.setAttribute('data-has-listener', 'true');
                 });
-            });
-
+            };
+            initCards();
+            document.addEventListener('DOMContentLoaded', initCards);
             document.addEventListener('click', () => {
-                document.querySelectorAll('.flip-card.active').forEach(card => {
-                    card.classList.remove('active');
-                });
+                document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
             });
-        });
+        })();
     </script>
 </body>
 

@@ -272,30 +272,45 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Soporte para tarjetas flip en dispositivos táctiles
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.flip-card').forEach(card => {
-                card.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    const isActive = this.classList.contains('active');
+        /**
+         * Soporte ultra-robusto para tarjetas en móviles
+         * Asegura la interacción sin importar retrasos en la carga
+         */
+        (function() {
+            const initCards = () => {
+                const cards = document.querySelectorAll('.flip-card');
+                cards.forEach(card => {
+                    // Evitar múltiples listeners
+                    if (card.getAttribute('data-has-listener')) return;
                     
-                    // Cerrar todas las demás
-                    document.querySelectorAll('.flip-card.active').forEach(other => {
-                        if (other !== this) other.classList.remove('active');
+                    card.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const wasActive = this.classList.contains('active');
+                        
+                        // Cerrar otras
+                        cards.forEach(c => c.classList.remove('active'));
+                        
+                        // Alternar actual
+                        if (!wasActive) {
+                            this.classList.add('active');
+                        }
                     });
                     
-                    // Alternar la actual
-                    this.classList.toggle('active', !isActive);
+                    card.setAttribute('data-has-listener', 'true');
                 });
-            });
+            };
 
-            // Cerrar al tocar fuera
+            // Intentar inicializar inmediatamente
+            initCards();
+            
+            // Y también en DOMContentLoaded por seguridad
+            document.addEventListener('DOMContentLoaded', initCards);
+            
+            // Cerrar al pulsar fuera
             document.addEventListener('click', () => {
-                document.querySelectorAll('.flip-card.active').forEach(card => {
-                    card.classList.remove('active');
-                });
+                document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
             });
-        });
+        })();
     </script>
 </body>
 

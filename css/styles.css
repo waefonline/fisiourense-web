@@ -284,27 +284,36 @@ body {
 
 /* 2. TARJETAS DE SERVICIOS EN MÓVIL (Restaurado para que funcione el flip/slide) */
 @media (max-width: 767px) {
+    .flip-card {
+        height: 400px !important; /* Aumentamos ligeramente la altura en móvil para el texto */
+        touch-action: manipulation; /* Mejora la respuesta al toque */
+    }
+
     .flip-card-back {
-        /* Permitir que empiece fuera de la vista para poder deslizarlo */
+        /* Cubrir toda la tarjeta para evitar cortes de texto */
+        top: 0 !important;
+        bottom: 0 !important;
+        height: 100% !important;
         transform: translateY(100%) !important;
-        height: auto !important;
-        max-height: 100%;
-        padding: 1.5rem;
+        padding: 2rem !important;
         display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .flip-card.active .flip-card-back {
         transform: translateY(0) !important;
+        z-index: 100 !important;
     }
 
-    /* Aseguramos que el contenido sea visible */
+    /* Aseguramos visibilidad absoluta del contenido */
     .flip-card-back h3,
     .flip-card-back p {
         display: block !important;
         opacity: 1 !important;
+        visibility: visible !important;
     }
 }
 

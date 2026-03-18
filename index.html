@@ -1224,6 +1224,32 @@
         });
     </script>
 
+    <script>
+        /**
+         * Soporte ultra-robusto para tarjetas en móviles
+         */
+        (function() {
+            const initCards = () => {
+                const cards = document.querySelectorAll('.flip-card');
+                cards.forEach(card => {
+                    if (card.getAttribute('data-has-listener')) return;
+                    card.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const wasActive = this.classList.contains('active');
+                        cards.forEach(c => c.classList.remove('active'));
+                        if (!wasActive) this.classList.add('active');
+                    });
+                    card.setAttribute('data-has-listener', 'true');
+                });
+            };
+            initCards();
+            document.addEventListener('DOMContentLoaded', initCards);
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
