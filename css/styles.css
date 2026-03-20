@@ -433,7 +433,7 @@ body {
 .reveal {
     opacity: 0;
     transform: translateY(60px);
-    transition: all 1.8s cubic-bezier(0.15, 0.85, 0.35, 1);
+    transition: all 1.4s cubic-bezier(0.15, 0.85, 0.35, 1);
 }
 
 .reveal.active {
