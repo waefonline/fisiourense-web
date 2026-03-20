@@ -27,8 +27,17 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        #gallery-modal, #professional-modal, #lightbox { display: none; }
-        #gallery-modal.open, #professional-modal.open, #lightbox.open { display: flex !important; }
+        #gallery-modal,
+        #professional-modal,
+        #lightbox {
+            display: none;
+        }
+
+        #gallery-modal.open,
+        #professional-modal.open,
+        #lightbox.open {
+            display: flex !important;
+        }
     </style>
 </head>
 
@@ -61,7 +70,8 @@
                             class="font-medium rounded-lg px-4 py-2 transition-all duration-300 transform hover:-translate-y-px hover:shadow-lg text-white border border-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white">SERVICIOS</a>
                         <a href="#nosotros"
                             class="font-medium rounded-lg px-4 py-2 transition-all duration-300 transform hover:-translate-y-px hover:shadow-lg text-white border border-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white">NOSOTROS</a>
-                        <a href="javascript:void(0)" onclick="openGalleryModal()" class="font-medium rounded-lg px-4 py-2 transition-all duration-300 transform hover:-translate-y-px hover:shadow-lg text-white border border-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white">GALERÍA</a>
+                        <a href="javascript:void(0)" onclick="openGalleryModal()"
+                            class="font-medium rounded-lg px-4 py-2 transition-all duration-300 transform hover:-translate-y-px hover:shadow-lg text-white border border-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white">GALERÍA</a>
                         <a href="#contacto"
                             class="font-medium rounded-lg px-4 py-2 transition-all duration-300 transform hover:-translate-y-px hover:shadow-lg text-white border border-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white">CONTACTO</a>
                     </div>
@@ -70,8 +80,8 @@
                     <div class="w-1/3 flex justify-end items-center gap-4">
                         <a href="tel:988255461"
                             class="hidden md:inline-block bg-cyan-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400">LLAMAR</a>
-                        <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menú de navegación"
-                            aria-expanded="false">
+                        <button id="mobile-menu-button" class="md:hidden text-white"
+                            aria-label="Abrir menú de navegación" aria-expanded="false">
                             <i data-lucide="menu" class="h-8 w-8"></i>
                         </button>
                     </div>
@@ -81,7 +91,8 @@
                 <a href="#inicio" class="block text-white text-center py-3 hover:bg-cyan-700">INICIO</a>
                 <a href="#servicios" class="block text-white text-center py-3 hover:bg-cyan-700">SERVICIOS</a>
                 <a href="#nosotros" class="block text-white text-center py-3 hover:bg-cyan-700">NOSOTROS</a>
-                <a href="javascript:void(0)" onclick="openGalleryModal()" class="block text-white text-center py-3 hover:bg-cyan-700">GALERÍA</a>
+                <a href="javascript:void(0)" onclick="openGalleryModal()"
+                    class="block text-white text-center py-3 hover:bg-cyan-700">GALERÍA</a>
                 <a href="#contacto" class="block text-white text-center py-3 hover:bg-cyan-700">CONTACTO</a>
             </div>
         </header>
@@ -96,8 +107,7 @@
                         Bienvenidos a Fisiourense
                     </h1>
                     <p class="text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-10 font-light">
-                        Más de 15.000 pacientes han confiado en nosotros. Calidad, especialización y un trato
-                        personalizado para tu bienestar.
+                        Más de 15.000 personas ya confían en Fisiourense para su salud y bienestar.
                     </p>
 
                     <div class="flex flex-row justify-center transition-opacity duration-1000 delay-500 reveal-text">
@@ -111,7 +121,8 @@
 
                 <!-- Contadores (Forzamos una línea en móvil con grid) -->
                 <div class="relative z-20 px-2 md:px-4 mt-auto w-full">
-                    <div class="container mx-auto grid grid-cols-3 md:flex md:flex-wrap justify-center gap-2 md:gap-8 pb-4">
+                    <div
+                        class="container mx-auto grid grid-cols-3 md:flex md:flex-wrap justify-center gap-2 md:gap-8 pb-4">
                         <div
                             class="backdrop-blur-md bg-white/10 border border-white/20 px-2 py-3 md:px-8 md:py-4 rounded-xl text-center">
                             <div class="text-sm md:text-4xl font-bold"><span class="counter" data-target="25">0</span>+
@@ -122,7 +133,8 @@
                             class="backdrop-blur-md bg-white/10 border border-white/20 px-2 py-3 md:px-8 md:py-4 rounded-xl text-center">
                             <div class="text-sm md:text-4xl font-bold"><span class="counter" data-target="98">0</span>%
                             </div>
-                            <div class="text-[8px] md:text-sm opacity-90 leading-tight">Satisfacción<br>Garantizada</div>
+                            <div class="text-[8px] md:text-sm opacity-90 leading-tight">Satisfacción<br>Garantizada
+                            </div>
                         </div>
                         <div
                             class="backdrop-blur-md bg-white/10 border border-white/20 px-2 py-3 md:px-8 md:py-4 rounded-xl text-center">
@@ -138,11 +150,10 @@
                 <div class="container mx-auto px-4">
                     <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
                         <div class="md:w-1/2 text-center md:text-left">
-                            <h2 class="text-2xl md:text-3xl font-bold mb-4">¿Te duele algo y no sabes qué es?</h2>
+                            <h2 class="text-2xl md:text-3xl font-bold mb-4">¿Qué tratamiento necesitas?</h2>
                             <p class="text-cyan-100 text-lg mb-6 leading-relaxed">
-                                No busques en Google. Utiliza nuestro <strong>Asistente Virtual de Triaje</strong>.
-                                Nuestra Inteligencia Artificial analizará tus síntomas y te recomendará el servicio de
-                                Fisiourense más adecuado para ti.
+                                Cuéntanos tus síntomas. Nuestro <strong>Asistente Virtual</strong> te guiará hacia la
+                                solución más adecuada.
                             </p>
                             <div class="flex gap-4 justify-center md:justify-start">
                                 <div class="flex items-center gap-2 text-sm text-cyan-200">
@@ -216,7 +227,8 @@
                                     class="h-full w-full object-cover rounded-full shadow-md" loading="lazy">
                             </div>
                             <h3 class="font-bold text-lg text-cyan-900 mb-2">Calidad y Especialización</h3>
-                            <p class="text-gray-600 text-sm">Nuestros especialistas están en formación continua para aplicar las
+                            <p class="text-gray-600 text-sm">Nuestros especialistas están en formación continua para
+                                aplicar las
                                 técnicas más avanzadas y efectivas.</p>
                         </div>
                         <div class="text-center p-6 transition-transform duration-300 hover:scale-105">
@@ -255,9 +267,9 @@
 
             <section id="servicios" class="py-20 bg-gray-50 scroll-animate">
                 <div class="container mx-auto px-4 text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-cyan-800">SERVICIOS INTEGRALES PARA TU BIENESTAR
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-cyan-800">ESPECIALIDADES EN NUESTRO CENTRO
                     </h2>
-                    <p class="max-w-2xl mx-auto text-gray-600 mb-12">Ofrecemos un enfoque 360° para cuidar de ti.</p>
+                    <p class="max-w-2xl mx-auto text-gray-600 mb-12">Tu centro multidisciplinar de salud integral</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <a href="fisioterapia.html"
                             class="block focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-2xl">
@@ -366,6 +378,9 @@
                                         <p class="text-gray-600">Tratamientos de estética avanzada que combinan salud y
                                             belleza, utilizando la última tecnología para el cuidado facial y corporal.
                                         </p>
+                                        <p
+                                            class="text-[10px] text-gray-500 mt-2 font-medium border-t border-gray-200 pt-2 leading-tight">
+                                            *Servicio prestado por Verónica Vieitez.</p>
                                         <p class="mt-4 font-semibold text-cyan-600 italic">Haz clic para saber más</p>
                                     </div>
                                 </div>
@@ -379,10 +394,13 @@
                 <div class="container mx-auto px-4">
                     <div class="flex flex-col lg:flex-row items-center gap-12">
                         <div class="lg:w-1/2 text-center lg:text-left">
-                            <h2 class="text-3xl md:text-4xl font-bold text-cyan-800 mb-4">Profesionales de Fisiourense</h2>
+                            <h2 class="text-3xl md:text-4xl font-bold text-cyan-800 mb-4">QUIÉNES SOMOS</h2>
                             <p class="text-gray-600 mb-4 leading-relaxed">
-                                En Fisiourense, nuestra mayor satisfacción es ser testigos de tu mejoría. Llevamos 25
-                                años dedicados a la fisioterapia, combinando un trato cercano y humano con la máxima
+                                En Fisiourense, nuestra mayor satisfacción es ser testigos de tu mejoría. Fisiourense
+                                lleva 25
+                                años dedicada a la fisioterapia, evolucionando hoy hasta convertirse en un centro
+                                multidisciplinar donde colaboran distintos especialistas independientes. Combinamos un
+                                trato cercano y humano con la máxima
                                 profesionalidad. Creemos en la escucha activa para entender no solo tus síntomas, sino
                                 tus metas, y así diseñar un camino de recuperación conjunto.
                             </p>
@@ -394,52 +412,75 @@
                         <div class="lg:w-1/2 w-full flex justify-center">
                             <div class="relative shadow-2xl rounded-2xl overflow-hidden aspect-square w-full max-w-md">
                                 <!-- Carrusel: cada imagen es clickable para abrir el modal de CV -->
-                                <div id="gallery-slider" class="flex h-full transition-transform duration-500 ease-in-out">
-                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait" data-professional="gloria">
+                                <div id="gallery-slider"
+                                    class="flex h-full transition-transform duration-500 ease-in-out">
+                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait"
+                                        data-professional="gloria">
                                         <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773668459/Gloria_ugokhi.png"
                                             alt="Gloria - Profesional de Fisiourense"
                                             class="w-full h-full object-cover object-top">
-                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
                                             <p class="text-white font-semibold text-lg">Gloria</p>
-                                            <span class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
+                                            <span
+                                                class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i
+                                                    data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
                                         </div>
                                     </div>
-                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait" data-professional="emma">
+                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait"
+                                        data-professional="emma">
                                         <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773666592/Emma_ay7h68.png"
                                             alt="Emma - Profesional de Fisiourense"
                                             class="w-full h-full object-cover object-top">
-                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
                                             <p class="text-white font-semibold text-lg">Emma</p>
-                                            <span class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
+                                            <span
+                                                class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i
+                                                    data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
                                         </div>
                                     </div>
-                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait" data-professional="adrian">
+                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait"
+                                        data-professional="adrian">
                                         <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773666593/Adrian_jugsnn.png"
                                             alt="Adrián - Profesional de Fisiourense"
                                             class="w-full h-full object-cover object-top">
-                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
                                             <p class="text-white font-semibold text-lg">Adrián</p>
-                                            <span class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
+                                            <span
+                                                class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i
+                                                    data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
                                         </div>
                                     </div>
-                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait" data-professional="blanca">
+                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait"
+                                        data-professional="blanca">
                                         <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773666593/Blanca_ud1tu2.png"
                                             alt="Blanca - Profesional de Fisiourense"
                                             class="w-full h-full object-cover object-top">
-                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
                                             <p class="text-white font-semibold text-lg">Blanca</p>
-                                            <span class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
+                                            <span
+                                                class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i
+                                                    data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
                                         </div>
                                     </div>
-                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait" data-professional="vero">
+                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait"
+                                        data-professional="vero">
                                         <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773666594/Vero_exab8p.png"
                                             alt="Vero - Profesional de Fisiourense"
                                             class="w-full h-full object-cover object-top">
-                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
-                                            <p class="text-white font-semibold text-lg">Vero</p>
-                                            <span class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
+                                            <p class="text-white font-semibold text-lg">Verónica Vieitez</p>
+                                            <span
+                                                class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i
+                                                    data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
                                         </div>
                                     </div>
+
+
                                 </div>
                                 <button id="prev-gallery"
                                     class="absolute top-1/2 -translate-y-1/2 left-2 bg-white/70 p-2 rounded-full hover:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
@@ -454,15 +495,20 @@
             </section>
 
             <!-- ===== MODAL CV PROFESIONAL ===== -->
-            <div id="professional-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4" role="dialog" aria-modal="true">
+            <div id="professional-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4"
+                role="dialog" aria-modal="true">
                 <div id="modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
                 <div class="relative bg-white rounded-3xl shadow-2xl max-w-sm w-full overflow-hidden" id="modal-panel"
-                     style="transition: transform 0.3s ease, opacity 0.3s ease;">
+                    style="transition: transform 0.3s ease, opacity 0.3s ease;">
                     <!-- Header con foto -->
                     <div class="relative h-52 overflow-hidden bg-cyan-900">
-                        <img id="modal-photo" src="" alt="" class="absolute inset-0 w-full h-full object-cover object-top opacity-60">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/30 to-transparent"></div>
-                        <button id="modal-close-btn" class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 text-white rounded-full p-2 transition-all backdrop-blur-sm" aria-label="Cerrar">
+                        <img id="modal-photo" src="" alt=""
+                            class="absolute inset-0 w-full h-full object-cover object-top opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/30 to-transparent">
+                        </div>
+                        <button id="modal-close-btn"
+                            class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 text-white rounded-full p-2 transition-all backdrop-blur-sm"
+                            aria-label="Cerrar">
                             <i data-lucide="x" class="w-5 h-5"></i>
                         </button>
                         <div class="absolute bottom-0 left-0 right-0 p-5">
@@ -478,16 +524,18 @@
                     <!-- Cuerpo -->
                     <div class="p-6 pb-7">
                         <div class="flex items-center gap-2 mb-4">
-                            <div class="w-7 h-7 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700">
+                            <div
+                                class="w-7 h-7 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700">
                                 <i data-lucide="graduation-cap" class="w-4 h-4"></i>
                             </div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-cyan-700">Perfil Profesional</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-cyan-700">Perfil
+                                Profesional</span>
                         </div>
                         <p id="modal-bio" class="text-gray-600 leading-relaxed text-sm"></p>
                         <div id="modal-tags" class="flex flex-wrap gap-2 mt-4"></div>
                         <a href="#contacto" id="modal-cta"
-                           class="mt-5 flex items-center justify-center gap-2 w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 rounded-xl transition-all text-sm"
-                           onclick="closeProfessionalModal()">
+                            class="mt-5 flex items-center justify-center gap-2 w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 rounded-xl transition-all text-sm"
+                            onclick="closeProfessionalModal()">
                             <i data-lucide="calendar-check" class="w-4 h-4"></i> Pedir cita con este profesional
                         </a>
                     </div>
@@ -495,120 +543,223 @@
             </div>
 
             <!-- ===== MODAL GALERÍA (abierto desde el header) ===== -->
-            <div id="gallery-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8" role="dialog" aria-modal="true">
+            <div id="gallery-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8"
+                role="dialog" aria-modal="true">
                 <div id="gallery-modal-overlay" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
                 <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto">
                     <!-- Cabecera -->
-                    <div class="sticky top-0 bg-white z-10 flex items-center justify-between p-5 border-b border-gray-100">
+                    <div
+                        class="sticky top-0 bg-white z-10 flex items-center justify-between p-5 border-b border-gray-100">
                         <div>
                             <h2 class="text-xl font-bold text-cyan-800">Galería de la Clínica</h2>
                             <p class="text-xs text-gray-400">Nuestras instalaciones y tratamientos</p>
                         </div>
-                        <button id="gallery-modal-close" class="text-gray-400 hover:text-gray-700 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full p-2" aria-label="Cerrar galería">
+                        <button id="gallery-modal-close"
+                            class="text-gray-400 hover:text-gray-700 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full p-2"
+                            aria-label="Cerrar galería">
                             <i data-lucide="x" class="w-5 h-5"></i>
                         </button>
                     </div>
                     <!-- Grid de fotos -->
                     <div class="p-5 grid grid-cols-2 lg:grid-cols-3 gap-4">
                         <!-- Mix de imágenes antiguas y nuevas -->
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855189/fisiourense_espazo_02_eigobo.jpg" data-caption="Nuestras Instalaciones">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855189/fisiourense_espazo_02_eigobo.jpg" alt="Instalaciones Fisiourense" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855189/fisiourense_espazo_02_eigobo.jpg">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855189/fisiourense_espazo_02_eigobo.jpg"
+                                alt="Instalaciones Fisiourense" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773767329/tecnologia_khrpbd.png" data-caption="Tecnología de Vanguardia">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773767329/tecnologia_khrpbd.png" alt="Tecnología" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773767329/tecnologia_khrpbd.png">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773767329/tecnologia_khrpbd.png"
+                                alt="Tecnología" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855152/fisiourense_manos_05_sb7t5s.webp" data-caption="Excelencia en Terapia Manual">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855152/fisiourense_manos_05_sb7t5s.webp" alt="Terapia Manual" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855152/fisiourense_manos_05_sb7t5s.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855152/fisiourense_manos_05_sb7t5s.webp"
+                                alt="Terapia Manual" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855150/fisiourense_29_pa6qv6.webp" data-caption="Atención Personalizada">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855150/fisiourense_29_pa6qv6.webp" alt="Paciente" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855150/fisiourense_29_pa6qv6.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855150/fisiourense_29_pa6qv6.webp"
+                                alt="Paciente" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773764124/corporal_srrpif.png" data-caption="Tratamientos Corporales Avanzados">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773764124/corporal_srrpif.png" alt="Corporal" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773764124/corporal_srrpif.png">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773764124/corporal_srrpif.png"
+                                alt="Corporal" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855146/fisiourense_13_eixk60.webp" data-caption="Detalles que Cuidan de Ti">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855146/fisiourense_13_eixk60.webp" alt="Clínica" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855146/fisiourense_13_eixk60.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855146/fisiourense_13_eixk60.webp"
+                                alt="Clínica" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855148/fisiourense_estetica_06_ivtfno.webp" data-caption="Estética y Bienestar">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855148/fisiourense_estetica_06_ivtfno.webp" alt="Estética" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855148/fisiourense_estetica_06_ivtfno.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855148/fisiourense_estetica_06_ivtfno.webp"
+                                alt="Estética" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773763883/facial_l44gqi.png" data-caption="Cuidado Facial Exclusivo">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773763883/facial_l44gqi.png" alt="Facial" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773763883/facial_l44gqi.png">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773763883/facial_l44gqi.png"
+                                alt="Facial" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855188/fisiourense_espazo_01_tdztuy.jpg" data-caption="Espacios para tu Salud">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855188/fisiourense_espazo_01_tdztuy.jpg" alt="Consulta" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855188/fisiourense_espazo_01_tdztuy.jpg">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855188/fisiourense_espazo_01_tdztuy.jpg"
+                                alt="Consulta" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855146/fisiourense_28_u8hiax.webp" data-caption="Nuestro Compromiso">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855146/fisiourense_28_u8hiax.webp" alt="Equipo" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855146/fisiourense_28_u8hiax.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855146/fisiourense_28_u8hiax.webp"
+                                alt="Equipo" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855139/fisiourense_manos_03_jzgq8k.webp" data-caption="Profesionales a tu Servicio">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855139/fisiourense_manos_03_jzgq8k.webp" alt="Manos" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855139/fisiourense_manos_03_jzgq8k.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855139/fisiourense_manos_03_jzgq8k.webp"
+                                alt="Manos" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773764967/capsula_netvia.png" data-caption="Cápsula del Tiempo - Rejuvenece">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773764967/capsula_netvia.png" alt="Cápsula" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773764967/capsula_netvia.png">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773764967/capsula_netvia.png"
+                                alt="Cápsula" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855126/fisiourense_19_f5poj5.webp" data-caption="Cuidado Integral">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855126/fisiourense_19_f5poj5.webp" alt="Bienestar" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855126/fisiourense_19_f5poj5.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855126/fisiourense_19_f5poj5.webp"
+                                alt="Bienestar" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855145/fisiourense_08_rdakmr.webp" data-caption="Precisión en el Tratamiento">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855145/fisiourense_08_rdakmr.webp" alt="Tratamiento" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855145/fisiourense_08_rdakmr.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855145/fisiourense_08_rdakmr.webp"
+                                alt="Tratamiento" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773764281/laser_ebrfqs.png" data-caption="Depilación Láser de Diodo">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773764281/laser_ebrfqs.png" alt="Láser" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773764281/laser_ebrfqs.png">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773764281/laser_ebrfqs.png"
+                                alt="Láser" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855141/fisiourense_30_b3yqny.webp" data-caption="Confianza y Profesionalidad">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855141/fisiourense_30_b3yqny.webp" alt="Paciente" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855141/fisiourense_30_b3yqny.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855141/fisiourense_30_b3yqny.webp"
+                                alt="Paciente" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855131/fisiourense_manos_01_zgnqag.webp" data-caption="Excelencia Clínica">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855131/fisiourense_manos_01_zgnqag.webp" alt="Manos" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855131/fisiourense_manos_01_zgnqag.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855131/fisiourense_manos_01_zgnqag.webp"
+                                alt="Manos" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773765403/binary_ahqyy7.png" data-caption="Binary Care">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773765403/binary_ahqyy7.png" alt="Binary" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773765403/binary_ahqyy7.png">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773765403/binary_ahqyy7.png"
+                                alt="Binary" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855138/fisiourense_11_ublvav.webp" data-caption="Entorno de Recuperación">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855138/fisiourense_11_ublvav.webp" alt="Sala" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855138/fisiourense_11_ublvav.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855138/fisiourense_11_ublvav.webp"
+                                alt="Sala" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855187/fisiourense_espazo_03_c54yal.jpg" data-caption="Instalaciones Modernas">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855187/fisiourense_espazo_03_c54yal.jpg" alt="Instalaciones" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855187/fisiourense_espazo_03_c54yal.jpg">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855187/fisiourense_espazo_03_c54yal.jpg"
+                                alt="Instalaciones" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855130/fisiourense_manos_04_znlufx.webp" data-caption="Alivio Eficaz">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855130/fisiourense_manos_04_znlufx.webp" alt="Manos" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855130/fisiourense_manos_04_znlufx.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855130/fisiourense_manos_04_znlufx.webp"
+                                alt="Manos" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855138/fisiourense_26_rtcwty.webp" data-caption="Tu Salud en Buenas Manos">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855138/fisiourense_26_rtcwty.webp" alt="Equipo" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855138/fisiourense_26_rtcwty.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855138/fisiourense_26_rtcwty.webp"
+                                alt="Equipo" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855136/fisiourense_07_accv15.webp" data-caption="Compromiso Fisiourense">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855136/fisiourense_07_accv15.webp" alt="Terapia" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855136/fisiourense_07_accv15.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855136/fisiourense_07_accv15.webp"
+                                alt="Terapia" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855136/fisiourense_17_v9r1hb.webp" data-caption="Detalles del Servicio">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855136/fisiourense_17_v9r1hb.webp" alt="Detalle" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855136/fisiourense_17_v9r1hb.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855136/fisiourense_17_v9r1hb.webp"
+                                alt="Detalle" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855133/fisiourense_12_xaacdu.webp" data-caption="Tratamiento Personalizado">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855133/fisiourense_12_xaacdu.webp" alt="Tratamiento" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855133/fisiourense_12_xaacdu.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855133/fisiourense_12_xaacdu.webp"
+                                alt="Tratamiento" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855129/fisiourense_manos_08_iw61rd.webp" data-caption="Especialistas en Movimiento">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855129/fisiourense_manos_08_iw61rd.webp" alt="Manos" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855129/fisiourense_manos_08_iw61rd.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855129/fisiourense_manos_08_iw61rd.webp"
+                                alt="Manos" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855134/fisiourense_21_qy2svw.webp" data-caption="Calidad en la Atención">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855134/fisiourense_21_qy2svw.webp" alt="Servicio" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855134/fisiourense_21_qy2svw.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855134/fisiourense_21_qy2svw.webp"
+                                alt="Servicio" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855127/fisiourense_manos_02_zlj34y.webp" data-caption="Bienestar a tu Alcance">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855127/fisiourense_manos_02_zlj34y.webp" alt="Manos" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855127/fisiourense_manos_02_zlj34y.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855127/fisiourense_manos_02_zlj34y.webp"
+                                alt="Bienestar" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855126/fisiourense_24_b5aflh.webp" data-caption="Cuidado del Paciente">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855126/fisiourense_24_b5aflh.webp" alt="Atención" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855126/fisiourense_24_b5aflh.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855126/fisiourense_24_b5aflh.webp"
+                                alt="Atención" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855128/fisiourense_09_vgxmxe.webp" data-caption="Mejora tu Calidad de Vida">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855128/fisiourense_09_vgxmxe.webp" alt="Vida" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855128/fisiourense_09_vgxmxe.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855128/fisiourense_09_vgxmxe.webp"
+                                alt="Vida" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855127/fisiourense_estetica_02_zdnaoi.webp" data-caption="Estética Avanzada Profesional">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855127/fisiourense_estetica_02_zdnaoi.webp" alt="Estética" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855127/fisiourense_estetica_02_zdnaoi.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855127/fisiourense_estetica_02_zdnaoi.webp"
+                                alt="Estética" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855125/fisiourense_23_gccfyb.webp" data-caption="Fundadoras Fisiourense">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855125/fisiourense_23_gccfyb.webp" alt="Atención" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855125/fisiourense_23_gccfyb.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855125/fisiourense_23_gccfyb.webp"
+                                alt="Atención" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer" data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855146/fisiourense_18_d2gan3.webp" data-caption="Excelencia en cada Paso">
-                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855146/fisiourense_18_d2gan3.webp" alt="Clínica" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="gallery-modal-item rounded-2xl overflow-hidden aspect-square cursor-pointer"
+                            data-src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773855146/fisiourense_18_d2gan3.webp">
+                            <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_600,q_auto,f_auto/v1773855146/fisiourense_18_d2gan3.webp"
+                                alt="Clínica" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
                     </div>
                 </div>
@@ -616,17 +767,22 @@
 
             <!-- ===== LIGHTBOX para la galería ===== -->
             <div id="lightbox" class="fixed inset-0 z-[300] flex items-center justify-center bg-black/95 p-4">
-                <button id="lightbox-close" class="absolute top-5 right-5 text-white/70 hover:text-white z-10" aria-label="Cerrar">
+                <button id="lightbox-close" class="absolute top-5 right-5 text-white/70 hover:text-white z-10"
+                    aria-label="Cerrar">
                     <i data-lucide="x" class="w-8 h-8"></i>
                 </button>
-                <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 p-3 rounded-full">
+                <button id="lightbox-prev"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 p-3 rounded-full">
                     <i data-lucide="chevron-left" class="w-7 h-7"></i>
                 </button>
-                <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 p-3 rounded-full">
+                <button id="lightbox-next"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 p-3 rounded-full">
                     <i data-lucide="chevron-right" class="w-7 h-7"></i>
                 </button>
                 <div class="max-w-4xl w-full flex flex-col items-center gap-4">
-                    <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full object-contain rounded-xl shadow-2xl" style="transition: opacity 0.3s;">
+                    <img id="lightbox-img" src="" alt=""
+                        class="max-h-[80vh] max-w-full object-contain rounded-xl shadow-2xl"
+                        style="transition: opacity 0.3s;">
                     <p id="lightbox-caption" class="text-white/70 text-sm italic"></p>
                 </div>
             </div>
@@ -637,11 +793,11 @@
                     <div class="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-10 text-center">
 
 
-                        <h2 class="text-3xl md:text-5xl font-bold tracking-tighter text-gray-900 mb-4">
-                            Lo que dicen nuestros pacientes
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-cyan-800">
+                            TESTIMONIOS
                         </h2>
                         <p class="text-center opacity-75 text-gray-600 mb-6">
-                            Descubre por qué más de 15.000 personas confían en Fisiourense para su recuperación.
+                            Comprometidos con tu salud: descubre qué dicen de nosotros.
                         </p>
 
                         <!-- Badge de Google -->
@@ -701,82 +857,152 @@
                             <div class="animate-marquee flex flex-col gap-5" style="animation-duration: 15s;">
                                 <!-- Bloque original -->
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Llevaba semanas fatal de la espalda. A las
-                                        pocas sesiones ya notaba mejoría de verdad. El trato es inmejorable."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Súper contento con el equipo de Fisiourense.
+                                        Llevaba averiado más de dos años y ellos han dado con la tecla. Tanto el
+                                        servicio de fisioterapia como el entrenador personal son unos máquinas. Muy
+                                        profesionales, directos al grano y súper competentes. Ha sido un acierto total
+                                        venir aquí, los recomiendo al 100%"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            GS</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Gonzalo S.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Llevaba semanas fatal de la espalda y en una
+                                        sola sesión ya noté un gran cambio. Gloria es una profesional excelente."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             MJ</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">María José L.</div>
-                                            <div class="text-xs opacity-60">Contractura lumbar</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Increíble profesionalidad. Me ayudaron a
-                                        preparar mi primera maratón sin lesiones. Volveré seguro."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Excelentes profesionales. Centro de
+                                        referencia en Ourense."</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            DV</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Dani Del Val</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Increíble profesionalidad. El trato es
+                                        exquisito y los resultados se notan desde el primer día."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             CR</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Carlos R.</div>
-                                            <div class="text-xs opacity-60">Runner aficionado</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Después de mi operación de rodilla, pensaba
-                                        que no volvería a jugar. Gracias a ellos estoy al 100%."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"excelente trato y profesionalidad"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            FA</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Francisco A.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Después de mi operación de rodilla, su
+                                        rehabilitación fue clave para volver a caminar sin dolor. Muy agradecido."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             PR</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Pablo Ruiz</div>
-                                            <div class="text-xs opacity-60">Futbolista</div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Bloque duplicado (para loop infinito) -->
+                                <!-- Bloque duplicado -->
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Llevaba semanas fatal de la espalda. A las
-                                        pocas sesiones ya notaba mejoría de verdad. El trato es inmejorable."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Súper contento con el equipo de Fisiourense.
+                                        Llevaba averiado más de dos años y ellos han dado con la tecla. Tanto el
+                                        servicio de fisioterapia como el entrenador personal son unos máquinas. Muy
+                                        profesionales, directos al grano y súper competentes. Ha sido un acierto total
+                                        venir aquí, los recomiendo al 100%"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            GS</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Gonzalo S.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Llevaba semanas fatal de la espalda y en una
+                                        sola sesión ya noté un gran cambio. Gloria es una profesional excelente."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             MJ</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">María José L.</div>
-                                            <div class="text-xs opacity-60">Contractura lumbar</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Increíble profesionalidad. Me ayudaron a
-                                        preparar mi primera maratón sin lesiones. Volveré seguro."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Excelentes profesionales. Centro de
+                                        referencia en Ourense."</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            DV</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Dani Del Val</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Increíble profesionalidad. El trato es
+                                        exquisito y los resultados se notan desde el primer día."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             CR</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Carlos R.</div>
-                                            <div class="text-xs opacity-60">Runner aficionado</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Después de mi operación de rodilla, pensaba
-                                        que no volvería a jugar. Gracias a ellos estoy al 100%."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"excelente trato y profesionalidad"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            FA</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Francisco A.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Después de mi operación de rodilla, su
+                                        rehabilitación fue clave para volver a caminar sin dolor. Muy agradecido."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             PR</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Pablo Ruiz</div>
-                                            <div class="text-xs opacity-60">Futbolista</div>
                                         </div>
                                     </div>
                                 </div>
@@ -788,82 +1014,148 @@
                             <div class="animate-marquee flex flex-col gap-5" style="animation-duration: 19s;">
                                 <!-- Bloque original -->
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Aquí dieron con lo que tenía. El trato es
-                                        súper cercano y profesional. Totalmente recomendables."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Excelentes profesionales. Fui por una
+                                        molestia en la rodilla que arrastraba desde hacía años y el resultado ha sido
+                                        inmejorable. Son muy competentes y el trato es de 10."</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            LG</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Luis Alberto Gómez</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Aquí dieron con lo que tenía después de pasar
+                                        por varios sitios. Recomendable 100%."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             AS</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Alberto S.</div>
-                                            <div class="text-xs opacity-60">Tendinitis de hombro</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"La osteopatía me cambió la vida. Mis migrañas
-                                        han desaparecido casi por completo. Eternamente agradecida."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Hace años que voy y siempre me trata Adrián,
+                                        es una persona súper profesional que te asesora y se preocupa, una pasada"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            C</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Constantin</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"La osteopatía me cambió la vida. Se acabaron
+                                        los dolores de cabeza constantes. Un gran equipo."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             LP</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Lucía P.</div>
-                                            <div class="text-xs opacity-60">Paciente de Osteopatía</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Estoy encantado gente amable"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            MF</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Manuela Fernández</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
                                     <p class="text-sm text-gray-600 mb-3">"El plan nutricional es muy fácil de seguir y
-                                        he logrado mi peso ideal sin pasar hambre. ¡Fenomenal!"</p>
+                                        he conseguido mis objetivos sin pasar hambre."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             MG</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Marcos G.</div>
-                                            <div class="text-xs opacity-60">Nutrición</div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Bloque duplicado -->
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Aquí dieron con lo que tenía. El trato es
-                                        súper cercano y profesional. Totalmente recomendables."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Excelentes profesionales. Fui por una
+                                        molestia en la rodilla que arrastraba desde hacía años y el resultado ha sido
+                                        inmejorable. Son muy competentes y el trato es de 10."</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            LG</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Luis Alberto Gómez</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Aquí dieron con lo que tenía después de pasar
+                                        por varios sitios. Recomendable 100%."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             AS</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Alberto S.</div>
-                                            <div class="text-xs opacity-60">Tendinitis de hombro</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"La osteopatía me cambió la vida. Mis migrañas
-                                        han desaparecido casi por completo. Eternamente agradecida."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Hace años que voy y siempre me trata Adrián,
+                                        es una persona súper profesional que te asesora y se preocupa, una pasada"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            C</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Constantin</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"La osteopatía me cambió la vida. Se acabaron
+                                        los dolores de cabeza constantes. Un gran equipo."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             LP</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Lucía P.</div>
-                                            <div class="text-xs opacity-60">Paciente de Osteopatía</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Estoy encantado gente amable"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            MF</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Manuela Fernández</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
                                     <p class="text-sm text-gray-600 mb-3">"El plan nutricional es muy fácil de seguir y
-                                        he logrado mi peso ideal sin pasar hambre. ¡Fenomenal!"</p>
+                                        he conseguido mis objetivos sin pasar hambre."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             MG</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Marcos G.</div>
-                                            <div class="text-xs opacity-60">Nutrición</div>
                                         </div>
                                     </div>
                                 </div>
@@ -875,82 +1167,146 @@
                             <div class="animate-marquee flex flex-col gap-5" style="animation-duration: 17s;">
                                 <!-- Bloque original -->
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Volví mucho antes de lo esperado gracias al
-                                        trabajo de readaptación. Muy contento con el resultado."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Servicio de 10. Aunque no me queda cerca
+                                        precisamente, han ganado un nuevo cliente."</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            CS</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Carlos Sorribes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Volví a entrenar mucho antes de lo esperado
+                                        gracias a su tratamiento deportivo."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             DM</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Diego M.</div>
-                                            <div class="text-xs opacity-60">Rotura fibrilar</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Atención de 10. Las instalaciones son
-                                        modernas y se nota que invierten en tecnología. Muy recomendables."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Encantada!! Me siguen ayudando y, estoy
+                                        mejorando. Trato excelente!!!!"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            MA</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Marisol Andújar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Atención de 10. Son amables, profesionales y
+                                        las instalaciones están impecables."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             SB</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Sofía B.</div>
-                                            <div class="text-xs opacity-60">Cervicalgia</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Mi experiencia en estética ha sido
-                                        maravillosa. Tratamientos efectivos y un personal encantador."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Muy bien, maravillosos!!!"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            RG</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Raquel García</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Mi experiencia en estética ha sido fabulosa.
+                                        Resultados reales con un trato inmejorable."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             AV</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Ana V.</div>
-                                            <div class="text-xs opacity-60">Estética Avanzada</div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Bloque duplicado (para loop infinito) -->
+                                <!-- Bloque duplicado -->
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Volví mucho antes de lo esperado gracias al
-                                        trabajo de readaptación. Muy contento con el resultado."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Servicio de 10. Aunque no me queda cerca
+                                        precisamente, han ganado un nuevo cliente."</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            CS</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Carlos Sorribes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Volví a entrenar mucho antes de lo esperado
+                                        gracias a su tratamiento deportivo."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             DM</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Diego M.</div>
-                                            <div class="text-xs opacity-60">Rotura fibrilar</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Atención de 10. Las instalaciones son
-                                        modernas y se nota que invierten en tecnología. Muy recomendables."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Encantada!! Me siguen ayudando y, estoy
+                                        mejorando. Trato excelente!!!!"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            MA</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Marisol Andújar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Atención de 10. Son amables, profesionales y
+                                        las instalaciones están impecables."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             SB</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Sofía B.</div>
-                                            <div class="text-xs opacity-60">Cervicalgia</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
-                                    <p class="text-sm text-gray-600 mb-3">"Mi experiencia en estética ha sido
-                                        maravillosa. Tratamientos efectivos y un personal encantador."</p>
+                                    <p class="text-sm text-gray-600 mb-3">"Muy bien, maravillosos!!!"</p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
+                                            RG</div>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-sm text-gray-900">Raquel García</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-2xl border shadow-lg shadow-cyan-900/5">
+                                    <p class="text-sm text-gray-600 mb-3">"Mi experiencia en estética ha sido fabulosa.
+                                        Resultados reales con un trato inmejorable."</p>
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 font-bold text-xs">
                                             AV</div>
                                         <div class="flex flex-col">
                                             <div class="font-medium text-sm text-gray-900">Ana V.</div>
-                                            <div class="text-xs opacity-60">Estética Avanzada</div>
                                         </div>
                                     </div>
                                 </div>
@@ -966,7 +1322,7 @@
             <section id="faq" class="py-20 bg-white scroll-animate">
                 <div class="container mx-auto px-4 max-w-4xl">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Preguntas Frecuentes</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-3 text-cyan-800">PREGUNTAS FRECUENTES</h2>
                         <p class="text-gray-500 max-w-2xl mx-auto">Resuelve tus dudas. Para más información, llámanos al
                             <a href="tel:988255461"
                                 class="text-cyan-600 hover:text-cyan-700 font-medium border-b border-cyan-600">988 255
@@ -994,27 +1350,7 @@
                                 </div>
                             </details>
                         </div>
-                        <!-- Pregunta 2 - Visible siempre -->
-                        <div class="border-b border-gray-200 faq-item">
-                            <details class="group">
-                                <summary
-                                    class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
-                                    <h3 class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
-                                        ¿Trabajáis con seguros?
-                                    </h3>
-                                    <i data-lucide="plus"
-                                        class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
-                                </summary>
-                                <div class="pb-5 pr-8">
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Sí, colaboramos con las principales compañías de seguros médicos. Contáctanos
-                                        para
-                                        confirmar si tu seguro está incluido y los procedimientos para facturación
-                                        directa.
-                                    </p>
-                                </div>
-                            </details>
-                        </div>
+
                         <!-- Pregunta 3 - Visible siempre -->
                         <div class="border-b border-gray-200 faq-item">
                             <details class="group">
@@ -1028,7 +1364,7 @@
                                 </summary>
                                 <div class="pb-5 pr-8">
                                     <p class="text-gray-600 leading-relaxed">
-                                        Cada sesión tiene una duración aproximada de 45-60 minutos, dependiendo del tipo
+                                        Cada sesión tiene una duración aproximada de 50 minutos, dependiendo del tipo
                                         de
                                         tratamiento y las necesidades específicas de cada paciente.
                                     </p>
@@ -1036,50 +1372,29 @@
                             </details>
                         </div>
 
+                        <!-- Pregunta 4 - Visible siempre -->
+                        <div class="border-b border-gray-200 faq-item">
+                            <details class="group">
+                                <summary
+                                    class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
+                                    <h3 class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
+                                        ¿Qué debo traer a mi primera cita?
+                                    </h3>
+                                    <i data-lucide="plus"
+                                        class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
+                                </summary>
+                                <div class="pb-5 pr-8">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Te recomendamos traer informes médicos o pruebas diagnósticas previas
+                                        (radiografías, resonancias, etc.) si las tienes. También es aconsejable
+                                        vestir ropa cómoda que permita acceder a la zona a tratar.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
                         <!-- Preguntas adicionales (ocultas por defecto) -->
                         <div id="faq-hidden" class="hidden space-y-3">
-                            <!-- Pregunta 4 -->
-                            <div class="border-b border-gray-200 faq-item">
-                                <details class="group">
-                                    <summary
-                                        class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
-                                        <h3
-                                            class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
-                                            ¿Qué debo traer a mi primera cita?
-                                        </h3>
-                                        <i data-lucide="plus"
-                                            class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
-                                    </summary>
-                                    <div class="pb-5 pr-8">
-                                        <p class="text-gray-600 leading-relaxed">
-                                            Te recomendamos traer informes médicos o pruebas diagnósticas previas
-                                            (radiografías, resonancias, etc.) si las tienes. También es aconsejable
-                                            vestir ropa cómoda que permita acceder a la zona a tratar.
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-                            <!-- Pregunta 5 -->
-                            <div class="border-b border-gray-200 faq-item">
-                                <details class="group">
-                                    <summary
-                                        class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
-                                        <h3
-                                            class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
-                                            ¿Ofrecéis tratamientos a domicilio?
-                                        </h3>
-                                        <i data-lucide="plus"
-                                            class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
-                                    </summary>
-                                    <div class="pb-5 pr-8">
-                                        <p class="text-gray-600 leading-relaxed">
-                                            Sí, disponemos de servicio de fisioterapia a domicilio para pacientes con
-                                            movilidad reducida o que prefieran recibir el tratamiento en la comodidad de
-                                            su hogar. Consúltanos disponibilidad y tarifas.
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
                             <!-- Pregunta 6 -->
                             <div class="border-b border-gray-200 faq-item">
                                 <details class="group">
@@ -1184,7 +1499,8 @@
             <section id="contacto" class="py-20 bg-cyan-700 text-white scroll-animate">
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold">DA EL PRIMER PASO HACIA TU RECUPERACIÓN</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-white">DA EL PRIMER PASO HACIA TU
+                            RECUPERACIÓN</h2>
                         <p class="max-w-2xl mx-auto mt-2 opacity-90">Nos encontrarás en el corazón de Ourense. ¡Ven a
                             visitarnos!</p>
                     </div>
@@ -1213,7 +1529,7 @@
                                         <div class="bg-cyan-600 p-3 rounded-full flex-shrink-0" aria-hidden="true"><i
                                                 data-lucide="phone" class="h-6 w-6"></i></div>
                                         <div>
-                                            <h3 class="font-bold text-lg">Teléfono</h3>
+                                            <h3 class="font-bold text-lg">Teléfono citas</h3>
                                             <a href="tel:988255461"
                                                 class="opacity-80 hover:text-cyan-200 transition-colors">988 255 461</a>
                                         </div>
@@ -1234,7 +1550,8 @@
                                 <h3 class="font-bold text-2xl mb-2 text-cyan-800">Envíanos un mensaje</h3>
                                 <p class="text-gray-600 mb-6 text-sm">¿Tienes alguna duda? Escríbenos y te responderemos
                                     lo antes posible.</p>
-                                <form class="space-y-4">
+                                <form action="https://formsubmit.co/davidfllou@gmail.com" method="POST"
+                                    class="space-y-4">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
                                             <label for="name" class="sr-only">Nombre</label>
@@ -1242,8 +1559,8 @@
                                                 class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
                                         </div>
                                         <div>
-                                            <label for="phone" class="sr-only">Teléfono</label>
-                                            <input type="tel" id="phone" placeholder="Teléfono"
+                                            <label for="phone" class="sr-only">Teléfono de contacto</label>
+                                            <input type="tel" id="phone" placeholder="Teléfono de contacto"
                                                 class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
                                         </div>
                                     </div>
@@ -1256,6 +1573,22 @@
                                         <label for="message" class="sr-only">Mensaje</label>
                                         <textarea id="message" rows="3" placeholder="¿En qué podemos ayudarte?"
                                             class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none"></textarea>
+                                    </div>
+                                    <div class="flex items-start mt-2 mb-4 text-left">
+                                        <div class="flex items-center h-5 mt-1">
+                                            <input id="privacy-consent" type="checkbox" required
+                                                class="w-4 h-4 text-cyan-600 bg-gray-50 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2 transition-all cursor-pointer">
+                                        </div>
+                                        <label for="privacy-consent" class="ml-2 text-sm text-gray-600 cursor-pointer">
+                                            He leído y acepto la
+                                            <a href="#"
+                                                onclick="document.getElementById('privacy-modal').style.display='flex'; return false;"
+                                                class="text-cyan-700 hover:text-cyan-900 underline transition-colors">
+                                                Política de Privacidad
+                                            </a>
+                                            y consiento el tratamiento de mis datos, incluida su posible cesión a los
+                                            profesionales independientes del centro.
+                                        </label>
                                     </div>
                                     <button type="submit"
                                         class="w-full bg-cyan-600 text-white font-bold py-3 rounded-full hover:bg-cyan-700 transition-all duration-300 transform hover:scale-[1.02] shadow-md">Enviar
@@ -1382,12 +1715,40 @@
                     </div>
                     <div class="p-6 space-y-4 text-sm text-gray-700 leading-relaxed overflow-y-auto">
                         <p>De conformidad con lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del
-                            Consejo, de 27 de abril de 2016 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre
-                            (LOPDGDD), le informamos sobre el tratamiento de sus datos personales:</p>
+                            Consejo (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), le informamos sobre el tratamiento de sus
+                            datos personales recabados en este sitio web:</p>
+
                         <h4 class="font-bold text-md text-cyan-900 pt-2">1. Responsable del Tratamiento</h4>
-                        <p><strong>Identidad:</strong> FISIOURENSE<br><strong>CIF:</strong>
-                            J32241820<br><strong>Dirección:</strong> Avda. Portugal 32, 32002
-                            Ourense<br><strong>Teléfono:</strong> 988 255 461</p>
+                        <p><strong>Identidad:</strong> FISIOURENSE (Gloria Rodríguez)<br>
+                            <strong>CIF/NIF:</strong> J32241820<br>
+                            <strong>Dirección:</strong> Avda. Portugal 32, 32002 Ourense<br>
+                            <strong>Teléfono:</strong> 988 255 461
+                        </p>
+
+                        <h4 class="font-bold text-md text-cyan-900 pt-2">2. Finalidad y Legitimación</h4>
+                        <p>Los datos recabados a través de nuestro formulario de contacto, teléfono o WhatsApp serán
+                            tratados con la finalidad de gestionar su solicitud de información, atender sus consultas y
+                            coordinar la reserva de citas. La base legal para este tratamiento es el consentimiento
+                            expreso que nos otorga al contactarnos.</p>
+
+                        <h4 class="font-bold text-md text-cyan-900 pt-2">3. Destinatarios y Profesionales Independientes
+                        </h4>
+                        <p>Nuestro centro funciona como un espacio multidisciplinar de salud y bienestar. Le informamos
+                            de que, en caso de que su consulta o solicitud de cita vaya dirigida a las especialidades de
+                            <strong>Nutrición, Entrenamiento Personal, Fisioterapia externa o Fisiourense
+                                Estética</strong>, sus datos personales serán comunicados y cedidos al profesional
+                            autónomo encargado de prestar dicho servicio. Esta cesión se realiza de forma estrictamente
+                            necesaria y con la única finalidad de que el especialista correspondiente pueda agendar su
+                            cita y prestarle la atención solicitada. Fuera de estos supuestos, no se cederán datos a
+                            terceros salvo obligación legal.
+                        </p>
+
+                        <h4 class="font-bold text-md text-cyan-900 pt-2">4. Derechos de los Usuarios</h4>
+                        <p>Puede ejercer en cualquier momento sus derechos de acceso, rectificación, supresión,
+                            limitación, portabilidad y oposición dirigiéndose a nuestra dirección postal o contactando a
+                            través del teléfono facilitado. Asimismo, tiene derecho a presentar una reclamación ante la
+                            Agencia Española de Protección de Datos (AEPD) si considera que el tratamiento no se ajusta
+                            a la normativa.</p>
                     </div>
                 </div>
             </div>
@@ -1457,7 +1818,7 @@
          * - Segunda pulsación (en cualquier momento): navega
          * - Cerrar solo si se toca fuera de TODAS las tarjetas
          */
-        (function() {
+        (function () {
             const initServiceCards = () => {
                 const cards = Array.from(document.querySelectorAll('a[href$=".html"] .flip-card'));
 
@@ -1465,7 +1826,7 @@
                     const link = card.closest('a');
                     if (!link || link.getAttribute('data-has-logic')) return;
 
-                    link.addEventListener('click', function(e) {
+                    link.addEventListener('click', function (e) {
                         // En escritorio dejamos el comportamiento normal
                         if (window.innerWidth >= 1024) return;
 
@@ -1518,23 +1879,24 @@
             },
             adrian: {
                 name: 'Adrián',
-                role: 'Fisioterapeuta Deportivo',
+                role: 'Fisioterapeuta Colaborador',
                 photo: 'https://res.cloudinary.com/djyfupa7x/image/upload/v1773666593/Adrian_jugsnn.png',
-                bio: 'Graduado en Fisioterapia por la Universidad de Santiago de Compostela. Especialista en fisioterapia deportiva y readaptación de lesiones. Colaborador habitual con equipos deportivos locales.',
+                bio: 'Graduado en Fisioterapia por la Universidad de Santiago de Compostela. Especialista independiente en fisioterapia deportiva y readaptación de lesiones. Colaborador habitual con equipos deportivos locales.',
                 tags: ['Deporte', 'Readaptación', 'Lesiones Musculares']
             },
             blanca: {
                 name: 'Blanca',
-                role: 'Fisioterapeuta · Nutricionista',
+                role: 'Fisioterapeuta Colaboradora',
                 photo: 'https://res.cloudinary.com/djyfupa7x/image/upload/v1773666593/Blanca_ud1tu2.png',
-                bio: 'Doble titulación en Fisioterapia y Nutrición. Ofrece un enfoque integral combinando la rehabilitación física con la nutrición terapéutica, ayudando a los pacientes a alcanzar sus objetivos de salud de forma completa.',
-                tags: ['Nutrición Clínica', 'Fisioterapia', 'Enfoque Integral']
+                bio: 'Titulada en Fisioterapia. Ofrece sus servicios como especialista independiente, ayudando a los pacientes a alcanzar sus objetivos de recuperación de forma completa y personalizada.',
+                tags: ['Fisioterapia', 'Terapia Manual', 'Enfoque Integral']
             },
+
             vero: {
-                name: 'Vero',
-                role: 'Esteticista · Terapeuta',
+                name: 'Verónica Vieitez',
+                role: 'Directora de Fisiourense Estética',
                 photo: 'https://res.cloudinary.com/djyfupa7x/image/upload/v1773666594/Vero_exab8p.png',
-                bio: 'Especialista en estética avanzada y tratamientos corporales. Experta en tecnología láser, tratamientos faciales y corporales de última generación. Comprometida con ofrecer resultados visibles y duraderos.',
+                bio: 'Directora de la empresa externa Fisiourense Estética. Especialista en estética avanzada y experta en tecnología láser y tratamientos faciales/corporales de última generación.',
                 tags: ['Estética Avanzada', 'Láser', 'Tratamientos Faciales']
             }
         };
