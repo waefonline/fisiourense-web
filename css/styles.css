@@ -13,7 +13,7 @@ body {
 }
 
 .hero-bg-fisioterapia {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757594590/Generated_Image_September_11_2025_-_2_42PM_egiqno.png');
+    background-image: linear-gradient(to bottom, rgba(0, 20, 30, 0.4), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757594590/Generated_Image_September_11_2025_-_2_42PM_egiqno.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -386,8 +386,104 @@ body {
 
 /* Máscara de desvanecimiento para el contenedor de testimonios */
 .mask-gradient-vertical {
-    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* =========================================
+   NUEVAS UTILIDADES PREMIUM
+   ========================================= */
+
+/* Glassmorphism */
+.glass-header {
+    background: rgba(14, 116, 144, 0.7); /* cyan-700 with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-header-scrolled {
+    background: rgba(14, 116, 144, 0.9);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section Dividers Container */
+.section-divider {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    pointer-events: none;
+}
+
+.section-divider svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+/* Reveal on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 2.2s cubic-bezier(0.15, 0.85, 0.35, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* IA Section Glow */
+.ia-card-glow {
+    position: relative;
+}
+
+.ia-card-glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #06b6d4, #0891b2, transparent, #22d3ee);
+    border-radius: 1.1rem;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(10px);
+    animation: border-glow 6s linear infinite;
+}
+
+@keyframes border-glow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Botón Premium Hover */
+.btn-premium {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.btn-premium:hover::after {
+    transform: scale(1);
 }
 
 /* =========================================

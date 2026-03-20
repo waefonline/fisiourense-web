@@ -28,11 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileMenuButtonIcon.classList.add('text-cyan-800');
             }
 
-            // Service pages specific
-            if (pideCitaButton) {
-                pideCitaButton.classList.remove('bg-cyan-500', 'text-white');
-                pideCitaButton.classList.add('bg-cyan-600', 'text-white');
-            }
+
             if (mobileMenuIconI) {
                 mobileMenuIconI.classList.remove('text-white');
                 mobileMenuIconI.classList.add('text-cyan-800');
@@ -44,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (navButtons.length > 0) {
                 navButtons.forEach(button => {
-                    button.classList.add('text-white', 'border-white/30', 'hover:bg-white/10');
                     button.classList.remove('text-cyan-800', 'border-transparent', 'hover:bg-gray-100');
+                    button.classList.add('text-white', 'border-white/30', 'hover:bg-white/10');
                 });
             }
 
@@ -54,11 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileMenuButtonIcon.classList.remove('text-cyan-800');
             }
 
-            // Service pages specific
-            if (pideCitaButton) {
-                pideCitaButton.classList.add('bg-cyan-500', 'text-white');
-                pideCitaButton.classList.remove('bg-cyan-600');
-            }
+
             if (mobileMenuIconI) {
                 mobileMenuIconI.classList.add('text-white');
                 mobileMenuIconI.classList.remove('text-cyan-800');
