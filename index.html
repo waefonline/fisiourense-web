@@ -1547,53 +1547,75 @@
                             </div>
 
                             <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl">
-                                <h3 class="font-bold text-2xl mb-2 text-cyan-800">Envíanos un mensaje</h3>
-                                <p class="text-gray-600 mb-6 text-sm">¿Tienes alguna duda? Escríbenos y te responderemos
-                                    lo antes posible.</p>
-                                <form action="https://formsubmit.co/davidfllou@gmail.com" method="POST"
-                                    class="space-y-4">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div id="form-container">
+                                    <form id="contact-form" class="space-y-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label for="form-name" class="sr-only">Nombre</label>
+                                                <input type="text" id="form-name" name="name" placeholder="Nombre"
+                                                    required
+                                                    class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
+                                            </div>
+                                            <div>
+                                                <label for="form-phone" class="sr-only">Teléfono de contacto</label>
+                                                <input type="tel" id="form-phone" name="phone"
+                                                    placeholder="Teléfono de contacto"
+                                                    class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
+                                            </div>
+                                        </div>
                                         <div>
-                                            <label for="name" class="sr-only">Nombre</label>
-                                            <input type="text" id="name" placeholder="Nombre"
+                                            <label for="form-email" class="sr-only">Email</label>
+                                            <input type="email" id="form-email" name="email"
+                                                placeholder="Correo electrónico" required
                                                 class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
                                         </div>
                                         <div>
-                                            <label for="phone" class="sr-only">Teléfono de contacto</label>
-                                            <input type="tel" id="phone" placeholder="Teléfono de contacto"
-                                                class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
+                                            <label for="form-message" class="sr-only">Mensaje</label>
+                                            <textarea id="form-message" name="message" rows="3"
+                                                placeholder="¿En qué podemos ayudarte?" required
+                                                class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none"></textarea>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <label for="email" class="sr-only">Email</label>
-                                        <input type="email" id="email" placeholder="Correo electrónico"
-                                            class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none">
-                                    </div>
-                                    <div>
-                                        <label for="message" class="sr-only">Mensaje</label>
-                                        <textarea id="message" rows="3" placeholder="¿En qué podemos ayudarte?"
-                                            class="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none"></textarea>
-                                    </div>
-                                    <div class="flex items-start mt-2 mb-4 text-left">
-                                        <div class="flex items-center h-5 mt-1">
-                                            <input id="privacy-consent" type="checkbox" required
-                                                class="w-4 h-4 text-cyan-600 bg-gray-50 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2 transition-all cursor-pointer">
+                                        <div class="flex items-start mt-2 mb-4 text-left">
+                                            <div class="flex items-center h-5 mt-1">
+                                                <input id="privacy-consent" type="checkbox" required
+                                                    class="w-4 h-4 text-cyan-600 bg-gray-50 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2 transition-all cursor-pointer">
+                                            </div>
+                                            <label for="privacy-consent"
+                                                class="ml-2 text-sm text-gray-600 cursor-pointer">
+                                                He leído y acepto la
+                                                <a href="#"
+                                                    onclick="document.getElementById('privacy-modal').style.display='flex'; return false;"
+                                                    class="text-cyan-700 hover:text-cyan-900 underline transition-colors">
+                                                    Política de Privacidad
+                                                </a>
+                                                y consiento el tratamiento de mis datos, incluida su posible cesión a
+                                                los
+                                                profesionales independientes del centro.
+                                            </label>
                                         </div>
-                                        <label for="privacy-consent" class="ml-2 text-sm text-gray-600 cursor-pointer">
-                                            He leído y acepto la
-                                            <a href="#"
-                                                onclick="document.getElementById('privacy-modal').style.display='flex'; return false;"
-                                                class="text-cyan-700 hover:text-cyan-900 underline transition-colors">
-                                                Política de Privacidad
-                                            </a>
-                                            y consiento el tratamiento de mis datos, incluida su posible cesión a los
-                                            profesionales independientes del centro.
-                                        </label>
+                                        <button type="submit" id="submit-btn"
+                                            class="w-full bg-cyan-600 text-white font-bold py-3 rounded-full hover:bg-cyan-700 transition-all duration-300 transform hover:scale-[1.02] shadow-md">Enviar
+                                            Mensaje</button>
+                                    </form>
+
+                                    <!-- Mensaje de Éxito Personalizado -->
+                                    <div id="success-message" class="hidden text-center py-10 animate-fade-in">
+                                        <div
+                                            class="inline-flex items-center justify-center w-20 h-20 bg-green-100 text-green-600 rounded-full mb-6">
+                                            <i data-lucide="check-circle-2" class="h-10 w-10"></i>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Mensaje enviado con éxito!
+                                        </h3>
+                                        <p class="text-gray-600 mb-6">Gracias por contactar con Fisiourense. Hemos
+                                            recibido tu consulta y nos pondremos en contacto contigo lo antes posible.
+                                        </p>
+                                        <button onclick="location.reload()"
+                                            class="text-cyan-600 font-semibold hover:text-cyan-800 transition-colors flex items-center gap-2 mx-auto justify-center">
+                                            <i data-lucide="refresh-cw" class="h-4 w-4"></i>
+                                            Enviar otro mensaje
+                                        </button>
                                     </div>
-                                    <button type="submit"
-                                        class="w-full bg-cyan-600 text-white font-bold py-3 rounded-full hover:bg-cyan-700 transition-all duration-300 transform hover:scale-[1.02] shadow-md">Enviar
-                                        Mensaje</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2005,6 +2027,61 @@
                 }
             });
         });
+
+        /* -------- GESTIÓN DEL FORMULARIO (Google Apps Script) -------- */
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        const submitBtn = document.getElementById('submit-btn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Mostrar estado de carga en el botón
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = `
+                    <span class="flex items-center justify-center gap-2">
+                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Enviando...
+                    </span>
+                `;
+
+                // Recoger datos
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData.entries());
+
+                /* 
+                   ATENCIÓN: Sustituye esta URL por tu 'URL de aplicación web' 
+                   obtenida al implementar tu Google Apps Script.
+                */
+                const googleScriptURL = 'https://script.google.com/macros/s/AKfycbykhVMinvRc67ILgw2wgAdIMi8ir0DKrZRsg4Z7ITXUZBRdLEPnZXhj9P8CkONWpkwefA/exec';
+
+                fetch(googleScriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Modo seguro para Google Apps Script
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                })
+                    .then(() => {
+                        // Éxito
+                        contactForm.classList.add('hidden');
+                        successMessage.classList.remove('hidden');
+                        window.scrollTo({ top: contactForm.offsetTop - 100, behavior: 'smooth' });
+                        lucide.createIcons();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta por WhatsApp.');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    });
+            });
+        }
     </script>
 
 </body>
