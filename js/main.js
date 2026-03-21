@@ -11,7 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuIconI = document.querySelector('#mobile-menu-button i');
 
 
+    const progressBar = document.getElementById('scroll-progress-bar');
+
     const handleScroll = () => {
+        // Update Scroll Progress Bar
+        if (progressBar) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+        }
+
         if (window.scrollY > 50) {
             header.classList.add('bg-white', 'shadow-lg');
             if (logoImg) logoImg.style.filter = 'none';
