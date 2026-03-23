@@ -280,10 +280,10 @@
 
             <section id="servicios" class="py-20 bg-gray-50 reveal">
                 <div class="container mx-auto px-4 text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-cyan-800">ESPECIALIDADES EN NUESTRO CENTRO
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-cyan-800">ESPECIALIDADES DE FISIOURENSE
                     </h2>
-                    <p class="max-w-2xl mx-auto text-gray-600 mb-12">Tu centro multidisciplinar de salud integral</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <p class="max-w-2xl mx-auto text-gray-600 mb-12">Tratamientos personalizados de fisioterapia y osteopatía</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
                         <a href="fisioterapia.html"
                             class="block focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-2xl reveal delay-1">
                             <div class="flip-card">
@@ -339,6 +339,15 @@
                                 </div>
                             </div>
                         </a>
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyan-800 border-t border-gray-200 pt-16">OTROS
+                        SERVICIOS
+                    </h2>
+                    <p class="max-w-3xl mx-auto text-gray-600 mb-12 text-sm italic">Se prestan dentro de las
+                        instalaciones de Fisiourense pero no son ofrecidos directamente por la empresa.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <a href="nutricion.html"
                             class="block focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-2xl reveal delay-1">
                             <div class="flip-card">
@@ -479,19 +488,7 @@
                                                     data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
                                         </div>
                                     </div>
-                                    <div class="flex-shrink-0 w-full h-full relative cursor-pointer professional-portrait"
-                                        data-professional="vero">
-                                        <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1773666594/Vero_exab8p.png"
-                                            alt="Vero - Profesional de Fisiourense"
-                                            class="w-full h-full object-cover object-top">
-                                        <div
-                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyan-900/80 to-transparent p-4 flex items-end justify-between">
-                                            <p class="text-white font-semibold text-lg">Verónica Vieitez</p>
-                                            <span
-                                                class="text-white/80 text-xs flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm"><i
-                                                    data-lucide="info" class="w-3 h-3"></i> Ver perfil</span>
-                                        </div>
-                                    </div>
+
 
 
                                 </div>
@@ -1364,26 +1361,6 @@
                             </details>
                         </div>
 
-                        <!-- Pregunta 3 - Visible siempre -->
-                        <div class="border-b border-gray-200 faq-item">
-                            <details class="group">
-                                <summary
-                                    class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
-                                    <h3 class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
-                                        ¿Cuánto dura una sesión?
-                                    </h3>
-                                    <i data-lucide="plus"
-                                        class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
-                                </summary>
-                                <div class="pb-5 pr-8">
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Cada sesión tiene una duración aproximada de 50 minutos, dependiendo del tipo
-                                        de
-                                        tratamiento y las necesidades específicas de cada paciente.
-                                    </p>
-                                </div>
-                            </details>
-                        </div>
 
                         <!-- Pregunta 4 - Visible siempre -->
                         <div class="border-b border-gray-200 faq-item">
@@ -1406,29 +1383,30 @@
                             </details>
                         </div>
 
+                        <!-- Pregunta 5 - Visible siempre (movida) -->
+                        <div class="border-b border-gray-200 faq-item">
+                            <details class="group">
+                                <summary
+                                    class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
+                                    <h3
+                                        class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
+                                        ¿Cuántas sesiones necesitaré?
+                                    </h3>
+                                    <i data-lucide="plus"
+                                        class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
+                                </summary>
+                                <div class="pb-5 pr-8">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        El número de sesiones varía según la patología, su cronicidad y la respuesta
+                                        individual de cada paciente. En la primera valoración te daremos una
+                                        estimación orientativa del plan de tratamiento.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
                         <!-- Preguntas adicionales (ocultas por defecto) -->
                         <div id="faq-hidden" class="hidden space-y-3">
-                            <!-- Pregunta 6 -->
-                            <div class="border-b border-gray-200 faq-item">
-                                <details class="group">
-                                    <summary
-                                        class="flex justify-between items-center py-5 cursor-pointer list-none hover:text-cyan-700 transition-colors">
-                                        <h3
-                                            class="font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
-                                            ¿Cuántas sesiones necesitaré?
-                                        </h3>
-                                        <i data-lucide="plus"
-                                            class="h-5 w-5 text-gray-400 transition-transform group-open:rotate-45 flex-shrink-0"></i>
-                                    </summary>
-                                    <div class="pb-5 pr-8">
-                                        <p class="text-gray-600 leading-relaxed">
-                                            El número de sesiones varía según la patología, su cronicidad y la respuesta
-                                            individual de cada paciente. En la primera valoración te daremos una
-                                            estimación orientativa del plan de tratamiento.
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
                             <!-- Pregunta 7 -->
                             <div class="border-b border-gray-200 faq-item">
                                 <details class="group">
@@ -1691,7 +1669,7 @@
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white mb-4">Servicios</h4>
+                        <h4 class="font-bold text-white mb-4">Servicios de Fisiourense</h4>
                         <ul class="space-y-2 text-sm">
                             <li><a href="fisioterapia.html"
                                     class="hover:text-cyan-400 transition-colors">Fisioterapia</a></li>
@@ -1699,23 +1677,16 @@
                                     class="hover:text-cyan-400 transition-colors">Fisioterapia Deportiva</a></li>
                             <li><a href="osteopatia.html" class="hover:text-cyan-400 transition-colors">Osteopatía</a>
                             </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-4">Servicios Externos</h4>
+                        <ul class="space-y-2 text-sm">
                             <li><a href="nutricion.html" class="hover:text-cyan-400 transition-colors">Nutrición</a>
                             </li>
                             <li><a href="entrenador-personal.html"
                                     class="hover:text-cyan-400 transition-colors">Entrenador Personal</a></li>
                             <li><a href="estetica.html" class="hover:text-cyan-400 transition-colors">Estética</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white mb-4">Enlaces</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#inicio" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
-                            <li><a href="#servicios" class="hover:text-cyan-400 transition-colors">Servicios</a></li>
-                            <li><a href="#nosotros" class="hover:text-cyan-400 transition-colors">Nosotros</a></li>
-                            <li><a href="#testimonios" class="hover:text-cyan-400 transition-colors">Opiniones</a></li>
-                            <li><a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a></li>
-                            <li><a href="#faq" class="hover:text-cyan-400 transition-colors">Preguntas Frecuentes</a>
-                            </li>
                         </ul>
                     </div>
                     <div>
