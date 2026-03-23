@@ -86,10 +86,10 @@
                                     <div class="flip-card-front"
                                         style="background-image: url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757692282/Generated_Image_September_12_2025_-_5_44PM_voyfo6.png'); background-size: cover; background-position: center;">
                                         <div class="card-bg-overlay"></div>
-                                        <h3 class="relative z-10 text-2xl font-bold px-4">Readaptación de Lesiones</h3>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Readaptación Funcional Post-lesión</h3>
                                     </div>
                                     <div class="flip-card-back">
-                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Readaptación de Lesiones</h3>
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Readaptación Funcional Post-lesión</h3>
                                         <p class="text-gray-600 text-sm">Puente esencial entre la fisioterapia y la
                                             vuelta a la actividad. Diseñamos programas progresivos para asegurar que la
                                             zona lesionada recupere su fuerza y funcionalidad, minimizando el riesgo de
@@ -131,6 +131,49 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Prevención y Salud Postural -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Prevención y Salud Postural</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Salud Postural y Core</h3>
+                                        <p class="text-gray-600 text-sm">Ejercicios específicos de estabilización y corrección postural para el día a día. Olvídate del dolor de espalda, mejora tu biomecánica e incrementa tu fuerza central progresivamente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Entrenamiento de Fuerza y Salud Metabólica -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Fuerza y Salud Metabólica</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Salud Metabólica</h3>
+                                        <p class="text-gray-600 text-sm">Entrenamiento enfocado en mejorar la composición corporal y regular parámetros de salud. Consigue un organismo más sano, metabólicamente activo y resistente trabajando la fuerza general.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Preparación Física Específica y Oposiciones -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front"
+                                        style="background-image: url('https://images.unsplash.com/photo-1554244933-d876deb6b2ff?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                                        <div class="card-bg-overlay"></div>
+                                        <h3 class="relative z-10 text-2xl font-bold px-4">Preparación Específica y Oposiciones</h3>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h3 class="text-xl font-bold text-cyan-800 mb-3">Pruebas y Oposiciones</h3>
+                                        <p class="text-gray-600 text-sm">Planimetría y entrenamiento exigente orientado a superar pruebas físicas (bomberos, policías, militares) o preparar competiciones deportivas. Alcanza tu pico de rendimiento con base científica.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -144,7 +187,7 @@
                                     class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
                                 <h3 class="font-bold text-xl text-cyan-900 mb-2">Supervisión Profesional</h3>
                                 <p class="text-gray-600">Entrena con la tranquilidad de estar supervisado por
-                                    profesionales sanitarios que entienden tu cuerpo y tus límites.</p>
+                                    profesionales que entienden tu cuerpo y tus límites.</p>
                             </div>
                             <div class="benefit-card">
                                 <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757692756/Generated_Image_September_12_2025_-_5_58PM_fcmiw2.png"
@@ -228,12 +271,12 @@
         /**
          * Soporte ultra-robusto para tarjetas en móviles
          */
-        (function() {
+        (function () {
             const initCards = () => {
                 const cards = document.querySelectorAll('.flip-card');
                 cards.forEach(card => {
                     if (card.getAttribute('data-has-listener')) return;
-                    card.addEventListener('click', function(e) {
+                    card.addEventListener('click', function (e) {
                         e.stopPropagation();
                         const wasActive = this.classList.contains('active');
                         cards.forEach(c => c.classList.remove('active'));
