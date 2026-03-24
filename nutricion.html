@@ -51,7 +51,8 @@
         <main>
             <!-- Sección Héroe -->
             <section
-                class="relative h-[60vh] flex items-center justify-center text-white text-center hero-bg-nutricion">
+                class="relative h-[60vh] flex items-center justify-center text-white text-center hero-bg-nutricion"
+                style="background-image: linear-gradient(rgba(0, 20, 30, 0.6), rgba(0, 20, 30, 0.6)), url('https://res.cloudinary.com/djyfupa7x/image/upload/w_2000,q_auto,f_auto/v1774358469/nutricion_nunsfy.png'); background-size: cover; background-position: center; background-attachment: scroll;">
                 <div class="relative z-10 px-4">
                     <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">Nutrición y Dietética</h1>
                     <p class="text-lg md:text-xl max-w-2xl mx-auto mt-4 font-light">Alimenta tu salud, potencia tu
@@ -67,11 +68,11 @@
                         <h2 class="text-3xl font-bold text-cyan-800 text-center mb-6">La nutrición como pilar de tu
                             salud</h2>
                         <p class="text-gray-600 leading-relaxed text-center mb-8">
-                            En Fisiourense entendemos que una alimentación adecuada es fundamental para una buena salud
-                            y un óptimo rendimiento físico. Nuestro servicio de nutrición se integra con el resto de
-                            nuestros tratamientos para ofrecerte un enfoque 360°. Te ayudamos a crear hábitos
-                            alimenticios saludables y sostenibles, adaptados a tus objetivos, estilo de vida y
-                            necesidades específicas.
+                            Entendemos que una alimentación adecuada es fundamental para tener salud y un óptimo
+                            rendimiento físico. Por ello, el <strong>servicio de Nutrición</strong>, gestionado de
+                            manera externa e independiente por un profesional experto, actúa en sinergia con la clínica
+                            para ofrecerte un enfoque 360°. Este servicio te ayudará a crear hábitos
+                            alimenticios saludables, sostenibles y adaptados a tus objetivos.
                         </p>
                     </section>
 
@@ -223,12 +224,12 @@
         /**
          * Soporte ultra-robusto para tarjetas en móviles
          */
-        (function() {
+        (function () {
             const initCards = () => {
                 const cards = document.querySelectorAll('.flip-card');
                 cards.forEach(card => {
                     if (card.getAttribute('data-has-listener')) return;
-                    card.addEventListener('click', function(e) {
+                    card.addEventListener('click', function (e) {
                         e.stopPropagation();
                         const wasActive = this.classList.contains('active');
                         cards.forEach(c => c.classList.remove('active'));
