@@ -5,54 +5,13 @@ body {
 
 /* Hero Backgrounds */
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1768586822/Fot_fot0_250614100_t1-145_bsxnep.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgb(0, 20, 30);
 }
 
-.hero-bg-fisioterapia {
-    background-image: linear-gradient(to bottom, rgba(0, 20, 30, 0.4), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1774452388/fisioterapiaportada_qiseeu.png');
-    background-size: cover;
-    background-position: center bottom;
-    background-attachment: scroll;
-}
-
-.hero-bg-deportiva {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757606662/Generated_Image_September_11_2025_-_5_53PM_1_tyodfn.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-}
-
-.hero-bg-osteopatia {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757607031/Generated_Image_September_11_2025_-_5_56PM_rvdmam.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-}
-
-.hero-bg-nutricion {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757607145/Generated_Image_September_11_2025_-_6_11PM_dmpnuo.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-}
-
-.hero-bg-entrenador {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/v1757607295/Generated_Image_September_11_2025_-_6_14PM_iharib.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-}
-
-.hero-bg-estetica {
-    background-image: linear-gradient(rgba(0, 20, 30, 0.7), rgba(0, 20, 30, 0.7)), url('https://res.cloudinary.com/djyfupa7x/image/upload/w_1000,q_auto,f_auto/v1773763687/portadaestetica_vztviz.png');
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: scroll !important;
-}
+/* Las clases .hero-bg-fisioterapia, .hero-bg-deportiva, etc. se han eliminado
+   ya que ahora se usan etiquetas <img> para mejorar el rendimiento LCP. */
 
 /* Service Cards (Modern Hover/Zoom Effect) */
 .flip-card {
