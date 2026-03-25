@@ -137,23 +137,24 @@
                             <div class="benefit-card">
                                 <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_1000,q_auto,f_auto/v1773744874/movilidad_lv98mp.png"
                                     class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
-                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Alivio del Dolor</h3>
-                                <p class="text-gray-600">Al tratar la causa raíz, la osteopatía proporciona un alivio
-                                    duradero del dolor crónico y agudo en todo el cuerpo.</p>
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Alivio Estructural</h3>
+                                <p class="text-gray-600">Se centra en restaurar la movilidad y aliviar dolores de
+                                    espalda, ciáticas, hernias discales, tendinitis y problemas articulares.</p>
                             </div>
                             <div class="benefit-card">
                                 <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_1000,q_auto,f_auto/v1774310185/movi_gfiwqd.png"
                                     class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
-                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Mejora de la Movilidad</h3>
-                                <p class="text-gray-600">Liberando restricciones en articulaciones, músculos y fascias,
-                                    se recupera la flexibilidad y el rango de movimiento.</p>
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Equilibrio Nervioso</h3>
+                                <p class="text-gray-600">Mediante manipulaciones suaves en el cráneo, ayuda a mitigar
+                                    migrañas, vértigos, estrés, ansiedad y disfunciones de la mandíbula (ATM).</p>
                             </div>
                             <div class="benefit-card">
                                 <img src="https://res.cloudinary.com/djyfupa7x/image/upload/w_1000,q_auto,f_auto/v1773761873/bienestar_vpuj8h.png"
                                     class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
-                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Bienestar General</h3>
-                                <p class="text-gray-600">Al reequilibrar los diferentes sistemas del cuerpo, se promueve
-                                    una mejora general de la salud, el descanso y la vitalidad.</p>
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Salud Orgánica</h3>
+                                <p class="text-gray-600">Mejora la movilidad de los órganos internos, siendo efectiva
+                                    para tratar problemas digestivos, dolores menstruales o adherencias tras una
+                                    cirugía.</p>
                             </div>
                         </div>
                     </section>
@@ -182,7 +183,7 @@
                             alt="Logotipo de Fisiourense" class="h-12 w-auto" style="filter: brightness(0) invert(1);">
                     </a>
                     <div class="flex items-center space-x-6 text-cyan-200">
-                        <a href="index.html" class="hover:text-white transition-colors font-medium">Volver a Inicio</a>
+                        <a href="#" class="hover:text-white transition-colors font-medium">Volver a Inicio</a>
                     </div>
                     <div class="flex justify-center space-x-4">
                         <a href="#" class="text-cyan-200 hover:text-white"><i data-lucide="instagram"
@@ -223,12 +224,12 @@
         /**
          * Soporte ultra-robusto para tarjetas en móviles
          */
-        (function() {
+        (function () {
             const initCards = () => {
                 const cards = document.querySelectorAll('.flip-card');
                 cards.forEach(card => {
                     if (card.getAttribute('data-has-listener')) return;
-                    card.addEventListener('click', function(e) {
+                    card.addEventListener('click', function (e) {
                         e.stopPropagation();
                         const wasActive = this.classList.contains('active');
                         cards.forEach(c => c.classList.remove('active'));
