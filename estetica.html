@@ -66,7 +66,10 @@
                     <section class="max-w-4xl mx-auto scroll-animate">
                         <h2 class="text-3xl font-bold text-cyan-800 text-center mb-6">Belleza que nace de la salud</h2>
                         <p class="text-gray-600 leading-relaxed text-center mb-8">
-                            <strong>Fisiourense Estética</strong> es un servicio externo e independiente operado en las instalaciones de la clínica. Este equipo autónomo combina tecnología innovadora en constante sinergia con nuestros profesionales sanitarios para ofrecerte tratamientos de estética avanzada eficaces, seguros y con resultados duraderos.
+                            <strong>Fisiourense Estética</strong> es un servicio externo e independiente operado en las
+                            instalaciones de la clínica. Este equipo autónomo combina tecnología innovadora en constante
+                            sinergia con nuestros profesionales sanitarios para ofrecerte tratamientos de estética
+                            avanzada eficaces, seguros y con resultados duraderos.
                         </p>
                     </section>
 
@@ -139,7 +142,9 @@
                                     </div>
                                     <div class="flip-card-back">
                                         <h3 class="text-xl font-bold text-cyan-800 mb-3">Cápsula del Tiempo</h3>
-                                        <p class="text-gray-600 text-sm">Tratamiento integral de rejuvenecimiento facial que combina dermatoscopia, exfoliación, regeneración y nutrición profunda para detener el paso del tiempo.</p>
+                                        <p class="text-gray-600 text-sm">Tratamiento integral de rejuvenecimiento facial
+                                            que combina dermatoscopia, exfoliación, regeneración y nutrición profunda
+                                            para detener el paso del tiempo.</p>
 
                                     </div>
                                 </div>
@@ -154,7 +159,9 @@
                                     </div>
                                     <div class="flip-card-back">
                                         <h3 class="text-xl font-bold text-cyan-800 mb-3">Masajes</h3>
-                                        <p class="text-gray-600 text-sm">Disfruta de nuestros masajes terapéuticos y relajantes. El equilibrio perfecto para liberar tensiones y reconectar con el bienestar.</p>
+                                        <p class="text-gray-600 text-sm">Disfruta de nuestros masajes terapéuticos y
+                                            relajantes. El equilibrio perfecto para liberar tensiones y reconectar con
+                                            el bienestar.</p>
 
                                     </div>
                                 </div>
@@ -169,7 +176,9 @@
                                     </div>
                                     <div class="flip-card-back">
                                         <h3 class="text-xl font-bold text-cyan-800 mb-3">Binary Care</h3>
-                                        <p class="text-gray-600 text-sm">Tecnología avanzada de diatermia y electroestimulación para reafirmación, reducción de grasa localizada y recuperación tisular.</p>
+                                        <p class="text-gray-600 text-sm">Tecnología avanzada de diatermia y
+                                            electroestimulación para reafirmación, reducción de grasa localizada y
+                                            recuperación tisular.</p>
 
                                     </div>
                                 </div>
@@ -199,9 +208,9 @@
                             <div class="benefit-card">
                                 <img src="https://res.cloudinary.com/djyfupa7x/image/upload/v1757694619/Generated_Image_September_12_2025_-_6_29PM_avkrt7.png"
                                     class="rounded-lg shadow-lg mb-4 h-56 w-full object-cover">
-                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Supervisión Sanitaria</h3>
+                                <h3 class="font-bold text-xl text-cyan-900 mb-2">Cuidado Certificado</h3>
                                 <p class="text-gray-600">Todos nuestros tratamientos se realizan bajo la supervisión de
-                                    profesionales de la salud, garantizando un enfoque riguroso.</p>
+                                    profesionales, garantizando un enfoque riguroso.</p>
                             </div>
                         </div>
                     </section>
@@ -272,36 +281,36 @@
          * Soporte ultra-robusto para tarjetas en móviles
          * Asegura la interacción sin importar retrasos en la carga
          */
-        (function() {
+        (function () {
             const initCards = () => {
                 const cards = document.querySelectorAll('.flip-card');
                 cards.forEach(card => {
                     // Evitar múltiples listeners
                     if (card.getAttribute('data-has-listener')) return;
-                    
-                    card.addEventListener('click', function(e) {
+
+                    card.addEventListener('click', function (e) {
                         e.stopPropagation();
                         const wasActive = this.classList.contains('active');
-                        
+
                         // Cerrar otras
                         cards.forEach(c => c.classList.remove('active'));
-                        
+
                         // Alternar actual
                         if (!wasActive) {
                             this.classList.add('active');
                         }
                     });
-                    
+
                     card.setAttribute('data-has-listener', 'true');
                 });
             };
 
             // Intentar inicializar inmediatamente
             initCards();
-            
+
             // Y también en DOMContentLoaded por seguridad
             document.addEventListener('DOMContentLoaded', initCards);
-            
+
             // Cerrar al pulsar fuera
             document.addEventListener('click', () => {
                 document.querySelectorAll('.flip-card.active').forEach(c => c.classList.remove('active'));
