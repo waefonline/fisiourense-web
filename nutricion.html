@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preload" as="image" href="https://res.cloudinary.com/djyfupa7x/image/upload/f_auto,q_auto/v1774358469/nutricion_nunsfy.png" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
-    </style>
 </head>
 
 <body class="bg-gray-200 text-gray-800">
@@ -51,9 +51,13 @@
         <main>
             <!-- Sección Héroe -->
             <section
-                class="relative h-[60vh] flex items-center justify-center text-white text-center hero-bg-nutricion"
-                style="background-image: linear-gradient(rgba(0, 20, 30, 0.6), rgba(0, 20, 30, 0.6)), url('https://res.cloudinary.com/djyfupa7x/image/upload/w_2000,q_auto,f_auto/v1774358469/nutricion_nunsfy.png'); background-size: cover; background-position: center; background-attachment: scroll;">
-                <div class="relative z-10 px-4">
+                class="relative h-[60vh] flex items-center justify-center text-white text-center overflow-hidden">
+                <img src="https://res.cloudinary.com/djyfupa7x/image/upload/f_auto,q_auto/v1774358469/nutricion_nunsfy.png" 
+                     alt="Nutrición" 
+                     class="absolute inset-0 w-full h-full object-cover z-0"
+                     fetchpriority="high">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/60 z-10"></div>
+                <div class="relative z-20 px-4">
                     <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">Nutrición y Dietética</h1>
                     <p class="text-lg md:text-xl max-w-2xl mx-auto mt-4 font-light">Alimenta tu salud, potencia tu
                         bienestar.</p>
