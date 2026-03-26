@@ -86,8 +86,7 @@ body {
 /* Service Cards (Modern Hover/Zoom Effect) - Solo en Escritorio */
 @media (hover: hover) {
     .flip-card:hover .flip-card-front {
-        transform: scale(1.05) perspective(1000px) rotateX(2deg) rotateY(2deg);
-        filter: brightness(1.1);
+        transform: scale(1.05);
     }
 
     .flip-card:hover .flip-card-back {
@@ -141,7 +140,6 @@ body {
 /* On mobile, ensure the front doesn't block the back when active */
 .flip-card.active .flip-card-front {
     opacity: 0.3;
-    filter: blur(2px);
 }
 
 .card-bg-overlay {
