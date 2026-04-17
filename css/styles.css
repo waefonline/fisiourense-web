@@ -3,6 +3,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+img {
+    image-rendering: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
 /* Hero Backgrounds */
 .hero-bg {
     background-size: cover;
