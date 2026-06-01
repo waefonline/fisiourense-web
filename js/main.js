@@ -258,10 +258,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Lógica para el Analizador de Síntomas con límite de consultas ---
+    // --- Lógica para el Analizador de Síntomas con IA y límite de consultas ---
     const analyzeBtn = document.getElementById('analyze-btn');
     const symptomInput = document.getElementById('symptom-input');
-    const geminiResultDiv = document.getElementById('gemini-result');
+    const iaResultDiv = document.getElementById('ia-result');
     const resultText = document.getElementById('result-text');
     const loadingSpinner = document.getElementById('loading-spinner');
 
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (analyzeBtn) {
         if (closeAnalyzeBtn) {
             closeAnalyzeBtn.addEventListener('click', () => {
-                geminiResultDiv.classList.add('hidden');
+                iaResultDiv.classList.add('hidden');
                 resultText.innerHTML = '';
                 symptomInput.value = '';
                 closeAnalyzeBtn.classList.add('hidden');
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!userInput.trim()) {
                 resultText.innerHTML = "Por favor, describe tu dolencia en el cuadro de texto.";
-                geminiResultDiv.classList.remove('hidden');
+                iaResultDiv.classList.remove('hidden');
                 loadingSpinner.style.display = 'none';
                 resultText.style.display = 'block';
                 if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
@@ -305,14 +305,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Verificar si ha alcanzado el límite
             if (queryCount >= maxQueries) {
                 resultText.innerHTML = "<strong>Has alcanzado el límite de " + maxQueries + " consultas diarias.</strong><br><br>Para una atención personalizada y sin límites, llámanos al <a href='tel:988255461' class='underline font-bold hover:text-white'>988 255 461</a> o envíanos un <a href='https://wa.me/34988255461' class='underline font-bold hover:text-white' target='_blank'>WhatsApp</a>.";
-                geminiResultDiv.classList.remove('hidden');
+                iaResultDiv.classList.remove('hidden');
                 loadingSpinner.style.display = 'none';
                 resultText.style.display = 'block';
                 if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
                 return;
             }
 
-            geminiResultDiv.classList.remove('hidden');
+            iaResultDiv.classList.remove('hidden');
             loadingSpinner.style.display = 'flex';
             resultText.style.display = 'none';
             resultText.innerHTML = '';
@@ -325,11 +325,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userInput: userInput }),
                 });
-                if (!response.ok) {
-                    throw new Error(`El servidor respondió con un error: ${response.statusText}`);
-                }
 
                 const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.debug || result.message || `Error del servidor: ${response.status}`);
+                }
 
                 let generatedText = result.text;
                 generatedText = generatedText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -353,7 +354,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } catch (error) {
                 console.error("Error al llamar a la función de API:", error);
-                resultText.innerHTML = "Lo sentimos, ha ocurrido un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde o llámanos directamente al <a href='tel:988255461' class='underline font-bold hover:text-white'>988 255 461</a>.";
+                let debugMsg = error.message || String(error);
+                resultText.innerHTML = "Lo sentimos, ha ocurrido un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde o llámanos directamente al <a href='tel:988255461' class='underline font-bold hover:text-white'>988 255 461</a>.<br><br><small class='text-red-300'>Debug: " + debugMsg + "</small>";
                 if (closeAnalyzeBtn) closeAnalyzeBtn.classList.remove('hidden');
             } finally {
                 loadingSpinner.style.display = 'none';
